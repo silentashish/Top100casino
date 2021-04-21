@@ -2,7 +2,6 @@ import React from 'react';
 import {StyleSheet, Text, TextStyle, View, ViewStyle} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {InfoScreen, NewsScreen, VideoScreen} from '../pages';
 import {backgroundColor} from '../constants/colors';
 
 interface props {
@@ -37,9 +36,9 @@ const TabRoute: React.FC<props> = () => {
           activeTintColor: 'tomato',
           inactiveTintColor: 'gray',
         }}>
-        <Tab.Screen name="Home" component={InfoScreen} />
+        {/* <Tab.Screen name="Home" component={InfoScreen} />
         <Tab.Screen name="Blog" component={NewsScreen} />
-        <Tab.Screen name="History" component={VideoScreen} />
+        <Tab.Screen name="History" component={VideoScreen} /> */}
       </Tab.Navigator>
     </View>
   );

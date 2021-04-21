@@ -8,7 +8,12 @@ import {
   ViewStyle,
   ActivityIndicator,
 } from 'react-native';
-import {defaultColor, fontColor, secondaryColor} from '../../constants/colors';
+import {
+  defaultColor,
+  fontColor,
+  secondaryColor,
+  whiteColor,
+} from '../../constants/colors';
 
 interface Props {
   children?: string;
@@ -48,7 +53,7 @@ const styles = StyleSheet.create<Style>({
   },
   text: {
     fontSize: 22,
-    color: fontColor,
+    color: whiteColor,
     fontWeight: 'bold',
   },
 });

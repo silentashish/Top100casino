@@ -15,12 +15,7 @@ interface props {
 }
 
 const LoginScreen: React.FC<props> = () => {
-  return (
-    <View style={styles.container}>
-      <Header back>Terms And Condition</Header>
-      <ScrollView></ScrollView>
-    </View>
-  );
+  return <View style={styles.container}></View>;
 };
 
 interface Style {
