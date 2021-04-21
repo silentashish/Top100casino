@@ -6,12 +6,13 @@ import {useNavigation} from '@react-navigation/native';
 interface Props {
   children?: string;
   back?: boolean;
+  center?: boolean;
 }
 
-const Header: React.FC<Props> = ({children, back}) => {
+const Header: React.FC<Props> = ({children, back, center}) => {
   const navigation = useNavigation();
   return (
-    <View style={styles.contain}>
+    <View style={styles.contain(center)}>
       {back && (
         <Icon
           name="chevron-left"
@@ -21,18 +22,18 @@ const Header: React.FC<Props> = ({children, back}) => {
           onPress={() => navigation.goBack()}
         />
       )}
-      <Text style={styles.text}>{children}</Text>
+      <Text style={styles.text(center)}>{children}</Text>
     </View>
   );
 };
 
 interface Style {
-  contain: ViewStyle;
-  text: TextStyle;
+  contain: any;
+  text: any;
 }
 
 const styles = StyleSheet.create<Style>({
-  contain: {
+  contain: (center: boolean) => ({
     width: '100%',
     paddingLeft: '4%',
     alignSelf: 'center',
@@ -42,12 +43,14 @@ const styles = StyleSheet.create<Style>({
     flexDirection: 'row',
     alignItems: 'center',
     elevation: 5,
-  },
-  text: {
+    justifyContent: center ? 'center' : null,
+  }),
+  text: (center: boolean) => ({
     fontSize: 22,
     color: 'black',
     fontWeight: 'bold',
-  },
+    textAlign: center ? 'center' : null,
+  }),
 });
 
 export {Header};

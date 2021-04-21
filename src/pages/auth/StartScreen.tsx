@@ -21,7 +21,7 @@ interface props {
 const StartScreen: React.FC<props> = ({navigation}) => {
   return (
     <View style={styles.container}>
-      <Image source={Images.welcomeImage} style={styles.imageStyle} />
+      <Image source={Images.WelcomeImage} style={styles.imageStyle} />
       <View style={styles.centerItem}>
         <TextField title bold>
           Welcome

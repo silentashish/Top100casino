@@ -25,7 +25,7 @@ interface props {
   navigation?: any;
 }
 
-const SignupScreen: React.FC<props> = ({navigation}) => {
+const SecondPersonalizationScreen: React.FC<props> = ({navigation}) => {
   return (
     <>
       <Header back></Header>
@@ -33,48 +33,37 @@ const SignupScreen: React.FC<props> = ({navigation}) => {
         <View>
           <Divider extralarge />
           <Divider extralarge />
-          <TextField bold title center>
-            SIGNUP
-          </TextField>
         </View>
         <View style={styles.centerItem}>
           <FormInput
             mode={'outlined'}
-            label="Username"
-            placeholder="Enter Username"
+            label="Email"
+            placeholder="Enter Email"
           />
           <Divider extralarge />
           <Divider />
           <FormInput
             mode={'outlined'}
             label="Password"
-            placeholder="Enter Password"
+            placeholder="Enter Email"
           />
-          <Divider extralarge />
-          <Divider />
-          <FormInput
-            mode={'outlined'}
-            label="Repeat Password"
-            placeholder="Enter Password"
-          />
-
           <Divider extralarge />
           <Divider extralarge />
           <Button onPress={() => navigation.navigate('LoginScreen')}>
-            SIGNUP
+            Login
           </Button>
         </View>
         <View>
           <Divider />
-          <TextField center>Already have an account with us ?</TextField>
+          <TextField center>Don't have an account with us ?</TextField>
           <Divider medium />
           <TextField
             center
             medium
             color="blue"
             underline
-            onPress={() => navigation.navigate('LoginScreen')}>
-            Login
+            onPress={() => navigation.navigate('SignupScreen')}>
+            Sign Up For Free
           </TextField>
           <Divider extralarge />
           <Divider extralarge />
@@ -137,4 +126,4 @@ const styles = ScaledSheet.create<Style>({
   },
 });
 
-export {SignupScreen};
+export {SecondPersonalizationScreen};

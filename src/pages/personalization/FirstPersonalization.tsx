@@ -19,65 +19,54 @@ import {
   Header,
   TextField,
 } from '../../components';
+import {ImageGrid} from '../../components/personalization';
 
 interface props {
   children?: JSX.Element;
   navigation?: any;
 }
 
-const SignupScreen: React.FC<props> = ({navigation}) => {
+const FirstPersonalizationScreen: React.FC<props> = ({navigation}) => {
   return (
     <>
-      <Header back></Header>
+      <Header back={false} center>
+        TOP10 Casinos
+      </Header>
       <View style={styles.container}>
         <View>
           <Divider extralarge />
-          <Divider extralarge />
-          <TextField bold title center>
-            SIGNUP
+          <TextField title center bold>
+            Get Personalized
+          </TextField>
+          <TextField medium center>
+            Choose the fied you like to see
           </TextField>
         </View>
         <View style={styles.centerItem}>
-          <FormInput
-            mode={'outlined'}
-            label="Username"
-            placeholder="Enter Username"
-          />
-          <Divider extralarge />
-          <Divider />
-          <FormInput
-            mode={'outlined'}
-            label="Password"
-            placeholder="Enter Password"
-          />
-          <Divider extralarge />
-          <Divider />
-          <FormInput
-            mode={'outlined'}
-            label="Repeat Password"
-            placeholder="Enter Password"
-          />
-
-          <Divider extralarge />
-          <Divider extralarge />
-          <Button onPress={() => navigation.navigate('LoginScreen')}>
-            SIGNUP
-          </Button>
-        </View>
-        <View>
-          <Divider />
-          <TextField center>Already have an account with us ?</TextField>
-          <Divider medium />
-          <TextField
-            center
-            medium
-            color="blue"
-            underline
-            onPress={() => navigation.navigate('LoginScreen')}>
-            Login
+          <TextField medium center>
+            Describe your gaming skills
           </TextField>
           <Divider extralarge />
           <Divider extralarge />
+          <View style={styles.rowView}>
+            <ImageGrid source={Images.Beginner} name="Beginner" />
+            <ImageGrid source={Images.Intermediate} name="Intermediate" />
+            <ImageGrid source={Images.Professional} name="Professional" />
+            <ImageGrid source={Images.VIP} name="VIP" />
+          </View>
+        </View>
+        <View>
+          <Divider />
+          <TextField center>Don't have an account with us ?</TextField>
+          <Divider medium />
+          <TextField
+            medium
+            color="blue"
+            underline
+            onPress={() => navigation.navigate('SignupScreen')}>
+            Skip
+          </TextField>
+          <Divider />
         </View>
       </View>
     </>
@@ -92,6 +81,7 @@ interface Style {
   titleDetails: TextStyle;
   imageStyle: ImageStyle;
   centerItem: ViewStyle;
+  rowView: ViewStyle;
 }
 
 const styles = ScaledSheet.create<Style>({
@@ -135,6 +125,11 @@ const styles = ScaledSheet.create<Style>({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  rowView: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+  },
 });
 
-export {SignupScreen};
+export {FirstPersonalizationScreen};

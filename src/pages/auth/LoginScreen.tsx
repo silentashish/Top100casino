@@ -1,21 +1,80 @@
 import React from 'react';
 import {
-  ScrollView,
   StyleSheet,
-  Text,
   TextStyle,
   View,
   ViewStyle,
+  Image,
+  ImageStyle,
 } from 'react-native';
-import {Header} from '../../components';
+import {ScaledSheet} from 'react-native-size-matters';
+import {Images} from '../../assets';
 import {backgroundColor} from '../../constants/colors';
+import {TextInput, Title} from 'react-native-paper';
+import {
+  Button,
+  CheckText,
+  Divider,
+  FormInput,
+  Header,
+  TextField,
+} from '../../components';
 
 interface props {
   children?: JSX.Element;
+  navigation?: any;
 }
 
-const LoginScreen: React.FC<props> = () => {
-  return <View style={styles.container}></View>;
+const LoginScreen: React.FC<props> = ({navigation}) => {
+  return (
+    <>
+      <Header back></Header>
+      <View style={styles.container}>
+        <View>
+          <Divider extralarge />
+          <Divider extralarge />
+          <TextField bold title center>
+            LOGIN
+          </TextField>
+        </View>
+        <View style={styles.centerItem}>
+          <FormInput
+            mode={'outlined'}
+            label="Email"
+            placeholder="Enter Email"
+          />
+          <Divider extralarge />
+          <Divider />
+          <FormInput
+            mode={'outlined'}
+            label="Password"
+            placeholder="Enter Email"
+          />
+          <Divider extralarge />
+          <Divider extralarge />
+          <Button
+            onPress={() => navigation.navigate('FirstPersonalizationScreen')}>
+            Login
+          </Button>
+        </View>
+        <View>
+          <Divider />
+          <TextField center>Don't have an account with us ?</TextField>
+          <Divider medium />
+          <TextField
+            center
+            medium
+            color="blue"
+            underline
+            onPress={() => navigation.navigate('SignupScreen')}>
+            Sign Up For Free
+          </TextField>
+          <Divider extralarge />
+          <Divider extralarge />
+        </View>
+      </View>
+    </>
+  );
 };
 
 interface Style {
@@ -24,12 +83,15 @@ interface Style {
   lottieWrapper: ViewStyle;
   gridContainer: ViewStyle;
   titleDetails: TextStyle;
+  imageStyle: ImageStyle;
+  centerItem: ViewStyle;
 }
 
-const styles = StyleSheet.create<Style>({
+const styles = ScaledSheet.create<Style>({
   container: {
     flex: 1,
     backgroundColor: backgroundColor,
+    justifyContent: 'space-between',
   },
   heading: {
     fontWeight: 'bold',
@@ -55,6 +117,16 @@ const styles = StyleSheet.create<Style>({
     fontWeight: 'bold',
     fontSize: 22,
     marginVertical: 5,
+  },
+  imageStyle: {
+    width: '100%',
+    height: '210@vs',
+    resizeMode: 'cover',
+    borderBottomLeftRadius: 125,
+  },
+  centerItem: {
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 });
 
