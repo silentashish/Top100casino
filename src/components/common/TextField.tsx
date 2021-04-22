@@ -22,6 +22,8 @@ interface Props {
   bold?: boolean;
   center?: boolean;
   underline?: boolean;
+  right?: boolean;
+  maxWidth?: number | string;
 }
 
 const TextField: React.FC<Props> = props => {
@@ -55,12 +57,15 @@ const styles = StyleSheet.create<Style>({
     bold,
     center,
     underline,
+    right,
+    maxWidth,
   }: Props) => ({
     fontSize: title ? 35 : large ? 30 : medium ? 18 : small ? 5 : 15,
     color: color ?? fontColor,
     fontWeight: bold ? 'bold' : null,
-    textAlign: center ? 'center' : null,
+    textAlign: center ? 'center' : right ? 'right' : null,
     textDecorationLine: underline ? 'underline' : null,
+    maxWidth: maxWidth ?? null,
   }),
 });
 

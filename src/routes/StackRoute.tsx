@@ -5,6 +5,9 @@ import {
   SignupScreen,
   StartScreen,
   FirstPersonalizationScreen,
+  SecondPersonalizationScreen,
+  ThirdPersonalizationScreen,
+  FourthPersonalizationScreen,
 } from '../pages';
 
 const Stack = createStackNavigator();
@@ -21,6 +24,18 @@ const StackRoute = () => {
       <Stack.Screen
         name="FirstPersonalizationScreen"
         component={FirstPersonalizationScreen}
+      />
+      <Stack.Screen
+        name="SecondPersonalizationScreen"
+        component={SecondPersonalizationScreen}
+      />
+      <Stack.Screen
+        name="ThirdPersonalizationScreen"
+        component={ThirdPersonalizationScreen}
+      />
+      <Stack.Screen
+        name="FourthPersonalizationScreen"
+        component={FourthPersonalizationScreen}
       />
     </Stack.Navigator>
   );

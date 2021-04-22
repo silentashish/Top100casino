@@ -6,29 +6,37 @@ import {
   Image,
   ImageStyle,
   Dimensions,
+  TouchableOpacity,
 } from 'react-native';
+import {
+  alternativeColor,
+  defaultColor,
+  secondaryColor,
+} from '../../constants/colors';
 import {TextField} from '../common';
 
 interface Props {
   source?: any;
   name?: string;
+  onPress?: () => void;
+  selected?: boolean;
 }
 
 const ImageGrid: React.FC<Props> = props => {
-  const {source, name} = props;
+  const {source, name, onPress, selected} = props;
 
   return (
-    <View style={styles.wrapperStyle}>
-      <Image source={source} style={styles.imageStyle} />
+    <TouchableOpacity style={styles.wrapperStyle} onPress={onPress}>
+      <Image source={source} style={styles.imageStyle(selected)} />
       <TextField center>{name}</TextField>
-    </View>
+    </TouchableOpacity>
   );
 };
 
 interface Style {
   inputStyle: ViewStyle;
   wrapperStyle: ViewStyle;
-  imageStyle: ImageStyle;
+  imageStyle: any;
 }
 
 const {width, height} = Dimensions.get('window');
@@ -40,10 +48,12 @@ const styles = StyleSheet.create<Style>({
     width: width * 0.4,
     flexDirection: 'column',
   },
-  imageStyle: {
+  imageStyle: (selected: boolean) => ({
     height: width * 0.4,
     width: width * 0.4,
-  },
+    borderWidth: selected ? 5 : null,
+    borderColor: selected ? defaultColor : null,
+  }),
 });
 
 export {ImageGrid};

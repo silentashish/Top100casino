@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   StyleSheet,
   TextStyle,
@@ -27,6 +27,12 @@ interface props {
 }
 
 const FirstPersonalizationScreen: React.FC<props> = ({navigation}) => {
+  const [selected, setSelected] = useState<number | null>(null);
+
+  const handlePress = (value: number) => {
+    setSelected(value);
+  };
+
   return (
     <>
       <Header back={false} center>
@@ -39,30 +45,57 @@ const FirstPersonalizationScreen: React.FC<props> = ({navigation}) => {
             Get Personalized
           </TextField>
           <TextField medium center>
-            Choose the fied you like to see
+            Choose the field you like to see
           </TextField>
         </View>
         <View style={styles.centerItem}>
           <TextField medium center>
-            Describe your gaming skills
+            What is your popular casino game ?
           </TextField>
           <Divider extralarge />
           <Divider extralarge />
           <View style={styles.rowView}>
-            <ImageGrid source={Images.Beginner} name="Beginner" />
-            <ImageGrid source={Images.Intermediate} name="Intermediate" />
-            <ImageGrid source={Images.Professional} name="Professional" />
-            <ImageGrid source={Images.VIP} name="VIP" />
+            <ImageGrid
+              source={Images.SlotMachine}
+              name="Slot Machine"
+              selected={selected === 1}
+              onPress={() => handlePress(1)}
+            />
+            <ImageGrid
+              source={Images.Roulette}
+              name="Roulette"
+              selected={selected === 2}
+              onPress={() => handlePress(2)}
+            />
+            <ImageGrid
+              source={Images.Blackjack}
+              name="Blackjack"
+              selected={selected === 3}
+              onPress={() => handlePress(3)}
+            />
+            <ImageGrid
+              source={Images.Pocker}
+              name="Pocker"
+              selected={selected === 4}
+              onPress={() => handlePress(4)}
+            />
           </View>
         </View>
         <View>
+          <Button
+            small
+            onPress={() => navigation.navigate('SecondPersonalizationScreen')}>
+            Next
+          </Button>
           <Divider />
-          <TextField center>Don't have an account with us ?</TextField>
+          <TextField center>1 / 4</TextField>
           <Divider medium />
           <TextField
             medium
             color="blue"
             underline
+            right
+            maxWidth={'95%'}
             onPress={() => navigation.navigate('SignupScreen')}>
             Skip
           </TextField>

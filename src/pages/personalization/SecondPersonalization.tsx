@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   StyleSheet,
   TextStyle,
@@ -19,6 +19,7 @@ import {
   Header,
   TextField,
 } from '../../components';
+import {ImageGrid} from '../../components/personalization';
 
 interface props {
   children?: JSX.Element;
@@ -26,47 +27,79 @@ interface props {
 }
 
 const SecondPersonalizationScreen: React.FC<props> = ({navigation}) => {
+  const [selected, setSelected] = useState<number | null>(null);
+
+  const handlePress = (value: number) => {
+    setSelected(value);
+  };
+
   return (
     <>
-      <Header back></Header>
+      <Header back={false} center>
+        TOP10 Casinos
+      </Header>
       <View style={styles.container}>
         <View>
           <Divider extralarge />
-          <Divider extralarge />
+          <TextField title center bold>
+            Get Personalized
+          </TextField>
+          <TextField medium center>
+            Choose the field you like to see
+          </TextField>
         </View>
         <View style={styles.centerItem}>
-          <FormInput
-            mode={'outlined'}
-            label="Email"
-            placeholder="Enter Email"
-          />
-          <Divider extralarge />
-          <Divider />
-          <FormInput
-            mode={'outlined'}
-            label="Password"
-            placeholder="Enter Email"
-          />
-          <Divider extralarge />
-          <Divider extralarge />
-          <Button onPress={() => navigation.navigate('LoginScreen')}>
-            Login
-          </Button>
-        </View>
-        <View>
-          <Divider />
-          <TextField center>Don't have an account with us ?</TextField>
-          <Divider medium />
-          <TextField
-            center
-            medium
-            color="blue"
-            underline
-            onPress={() => navigation.navigate('SignupScreen')}>
-            Sign Up For Free
+          <TextField medium center>
+            Describe your gaming skills
           </TextField>
           <Divider extralarge />
           <Divider extralarge />
+          <View style={styles.rowView}>
+            <ImageGrid
+              source={Images.Beginner}
+              name="Beginner"
+              selected={selected === 1}
+              onPress={() => handlePress(1)}
+            />
+            <ImageGrid
+              source={Images.Intermediate}
+              name="Intermediate"
+              selected={selected === 2}
+              onPress={() => handlePress(2)}
+            />
+            <ImageGrid
+              source={Images.Professional}
+              name="Professional"
+              selected={selected === 3}
+              onPress={() => handlePress(3)}
+            />
+            <ImageGrid
+              source={Images.VIP}
+              name="VIP"
+              selected={selected === 4}
+              onPress={() => handlePress(4)}
+            />
+          </View>
+        </View>
+        <View>
+          <Button
+            small
+            onPress={() => navigation.navigate('ThirdPersonalizationScreen')}>
+            Next
+          </Button>
+          <Divider />
+          <TextField center>2 / 4</TextField>
+          <Divider medium />
+          <TextField
+            medium
+            color="blue"
+            underline
+            right
+            maxWidth={'95%'}
+            onPress={() => navigation.navigate('SignupScreen')}>
+            Skip
+          </TextField>
+          <Divider />
         </View>
       </View>
     </>
@@ -81,6 +114,7 @@ interface Style {
   titleDetails: TextStyle;
   imageStyle: ImageStyle;
   centerItem: ViewStyle;
+  rowView: ViewStyle;
 }
 
 const styles = ScaledSheet.create<Style>({
@@ -123,6 +157,11 @@ const styles = ScaledSheet.create<Style>({
   centerItem: {
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  rowView: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
   },
 });
 

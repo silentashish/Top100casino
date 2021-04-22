@@ -19,12 +19,13 @@ interface Props {
   children?: string;
   onPress?: () => void;
   loading?: boolean;
+  small?: boolean;
 }
 
-const Button: React.FC<Props> = ({children, onPress, loading}) => {
+const Button: React.FC<Props> = ({children, onPress, loading, small}) => {
   return (
     <TouchableOpacity
-      style={styles.contain}
+      style={styles.contain(small)}
       onPress={onPress}
       disabled={loading}>
       {loading ? (
@@ -37,20 +38,20 @@ const Button: React.FC<Props> = ({children, onPress, loading}) => {
 };
 
 interface Style {
-  contain: ViewStyle;
+  contain: any;
   text: TextStyle;
 }
 
 const styles = StyleSheet.create<Style>({
-  contain: {
-    width: '95%',
+  contain: (small: boolean) => ({
+    width: small ? '40%' : '95%',
     justifyContent: 'center',
     alignItems: 'center',
     alignSelf: 'center',
     backgroundColor: defaultColor,
-    padding: 10,
+    padding: small ? 5 : 10,
     borderRadius: 5,
-  },
+  }),
   text: {
     fontSize: 22,
     color: whiteColor,
