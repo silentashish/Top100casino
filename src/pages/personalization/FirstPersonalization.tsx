@@ -74,8 +74,8 @@ const FirstPersonalizationScreen: React.FC<props> = ({navigation}) => {
               onPress={() => handlePress(3)}
             />
             <ImageGrid
-              source={Images.Pocker}
-              name="Pocker"
+              source={Images.Poker}
+              name="Poker"
               selected={selected === 4}
               onPress={() => handlePress(4)}
             />

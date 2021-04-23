@@ -3,7 +3,10 @@ import {StyleSheet, Text, TextStyle, View, ViewStyle} from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {backgroundColor} from '../constants/colors';
-
+import {BrandSearchStack, GameScreenStack} from './StackRoute';
+import {BonusTypeScreen, FavouritesScreen, NewsFeedScreen} from '../pages';
+import {Images} from '../assets';
+import {Avatar} from 'react-native-paper';
 interface props {
   children?: JSX.Element;
 }
@@ -16,29 +19,33 @@ const TabRoute: React.FC<props> = () => {
       <Tab.Navigator
         screenOptions={({route}) => ({
           tabBarIcon: ({focused, color, size}) => {
-            let iconName = 'ios-information-circle';
+            let iconName = Images.FavIcon;
 
-            if (route.name === 'Home') {
-              iconName = focused
-                ? 'ios-information-circle'
-                : 'ios-information-circle-outline';
-            } else if (route.name === 'Blog') {
-              iconName = focused ? 'ios-list-circle' : 'ios-list';
-            } else if (route.name === 'History') {
-              iconName = focused ? 'videocam' : 'videocam-outline';
+            if (route.name === 'Game') {
+              iconName = Images.GameIcon;
+            } else if (route.name === 'Brand') {
+              iconName = Images.BrandIcon;
+            } else if (route.name === 'NewsFeed') {
+              iconName = Images.NewsFeedIcon;
+            } else if (route.name === 'BonusType') {
+              iconName = Images.BonusIcon;
+            } else if (route.name === 'Favourite') {
+              iconName = Images.FavIcon;
             }
 
             // You can return any component that you like here!
-            return <Ionicons name={iconName} size={size} color={color} />;
+            return <Avatar.Image size={focused ? 35 : 25} source={iconName} />;
           },
         })}
         tabBarOptions={{
           activeTintColor: 'tomato',
           inactiveTintColor: 'gray',
         }}>
-        {/* <Tab.Screen name="Home" component={InfoScreen} />
-        <Tab.Screen name="Blog" component={NewsScreen} />
-        <Tab.Screen name="History" component={VideoScreen} /> */}
+        <Tab.Screen name="Game" component={GameScreenStack} />
+        <Tab.Screen name="Brand" component={BrandSearchStack} />
+        <Tab.Screen name="NewsFeed" component={NewsFeedScreen} />
+        <Tab.Screen name="BonusType" component={BonusTypeScreen} />
+        <Tab.Screen name="Favourite" component={FavouritesScreen} />
       </Tab.Navigator>
     </View>
   );

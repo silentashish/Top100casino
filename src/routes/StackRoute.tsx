@@ -8,7 +8,12 @@ import {
   SecondPersonalizationScreen,
   ThirdPersonalizationScreen,
   FourthPersonalizationScreen,
+  GameScreen,
+  GameDetailScreen,
+  BrandSearchScreen,
+  BrandDetailsScreen,
 } from '../pages';
+import {TabRoute} from './TabRoute';
 
 const Stack = createStackNavigator();
 
@@ -18,6 +23,7 @@ const StackRoute = () => {
       screenOptions={{
         headerShown: false,
       }}>
+      <Stack.Screen name="MainScreen" component={TabRoute} />
       <Stack.Screen name="StartScreen" component={StartScreen} />
       <Stack.Screen name="LoginScreen" component={LoginScreen} />
       <Stack.Screen name="SignupScreen" component={SignupScreen} />
@@ -41,4 +47,28 @@ const StackRoute = () => {
   );
 };
 
-export {StackRoute};
+const GameScreenStack = () => {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}>
+      <Stack.Screen name="GameScreen" component={GameScreen} />
+      <Stack.Screen name="GameDetailScreen" component={GameDetailScreen} />
+    </Stack.Navigator>
+  );
+};
+
+const BrandSearchStack = () => {
+  return (
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}>
+      <Stack.Screen name="BrandSearchScreen" component={BrandSearchScreen} />
+      <Stack.Screen name="BranndDetailsScreen" component={BrandDetailsScreen} />
+    </Stack.Navigator>
+  );
+};
+
+export {StackRoute, GameScreenStack, BrandSearchStack};
