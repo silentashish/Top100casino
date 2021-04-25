@@ -1,22 +1,25 @@
 import React from 'react';
-import {TextStyle, View, ViewStyle} from 'react-native';
+import {ScrollView, TextStyle, View, ViewStyle} from 'react-native';
 import {ScaledSheet} from 'react-native-size-matters';
 import {backgroundColor} from '../../../constants/colors';
-import {TitleImage} from '../../../components';
+
 import {Container} from '../../../components/common/Container';
-import {popular, trending, newrelease} from '../../../data';
+import {GameTypeImages} from '../../../data';
+import {GameTypeImage} from '../../../components';
 
 interface props {
   children?: JSX.Element;
   navigation?: any;
 }
 
-const GameScreen: React.FC<props> = () => {
+const GameTypeScreen: React.FC<props> = () => {
   return (
     <Container header headerTitle={'Top 10'} center>
-      <TitleImage {...trending} />
-      <TitleImage {...popular} />
-      <TitleImage {...newrelease} />
+      <ScrollView>
+        {GameTypeImages.map(item => {
+          return <GameTypeImage {...item} />;
+        })}
+      </ScrollView>
     </Container>
   );
 };
@@ -40,4 +43,4 @@ const styles = ScaledSheet.create<Style>({
   },
 });
 
-export {GameScreen};
+export {GameTypeScreen};

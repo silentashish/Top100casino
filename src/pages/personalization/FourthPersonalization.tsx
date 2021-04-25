@@ -57,7 +57,7 @@ const FourthPersonalizationScreen: React.FC<props> = ({navigation}) => {
           <View style={styles.rowView}>
             <ImageGrid
               source={Images.FreePlay}
-              name="Free Pay"
+              name="Free Play"
               selected={selected === 1}
               onPress={() => handlePress(1)}
             />

@@ -12,6 +12,7 @@ import {
   GameDetailScreen,
   BrandSearchScreen,
   BrandDetailsScreen,
+  GameTypeScreen,
 } from '../pages';
 import {TabRoute} from './TabRoute';
 
@@ -53,6 +54,7 @@ const GameScreenStack = () => {
       screenOptions={{
         headerShown: false,
       }}>
+      <Stack.Screen name="GameTypeScreen" component={GameTypeScreen} />
       <Stack.Screen name="GameScreen" component={GameScreen} />
       <Stack.Screen name="GameDetailScreen" component={GameDetailScreen} />
     </Stack.Navigator>
