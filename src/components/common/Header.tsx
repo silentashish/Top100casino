@@ -12,17 +12,18 @@ interface Props {
 const Header: React.FC<Props> = ({children, back, center}) => {
   const navigation = useNavigation();
   return (
-    <View style={styles.contain(center)}>
+    <View style={styles.container}>
       {back && (
         <Icon
           name="chevron-left"
           color="black"
           size={25}
-          style={{marginRight: 20}}
           onPress={() => navigation.goBack()}
         />
       )}
-      <Text style={styles.text(center)}>{children}</Text>
+      <View style={styles.contain(center)}>
+        <Text style={styles.text(center)}>{children}</Text>
+      </View>
     </View>
   );
 };
@@ -30,19 +31,25 @@ const Header: React.FC<Props> = ({children, back, center}) => {
 interface Style {
   contain: any;
   text: any;
+  container: ViewStyle;
 }
 
 const styles = StyleSheet.create<Style>({
+  container: {
+    width: '100%',
+    flexDirection: 'row',
+    backgroundColor: 'white',
+    alignItems: 'center',
+    paddingHorizontal: 10,
+    elevation: 5,
+  },
   contain: (center: boolean) => ({
     width: '100%',
     paddingLeft: '4%',
     alignSelf: 'center',
-    padding: 10,
     paddingVertical: 15,
-    backgroundColor: 'white',
     flexDirection: 'row',
     alignItems: 'center',
-    elevation: 5,
     justifyContent: center ? 'center' : null,
   }),
   text: (center: boolean) => ({
