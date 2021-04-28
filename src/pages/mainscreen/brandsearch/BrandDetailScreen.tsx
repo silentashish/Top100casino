@@ -13,19 +13,19 @@ interface props {
   route?: any;
 }
 
-const BrandDetailScreen: React.FC<props> = props => {
+const BrandDetailsScreen: React.FC<props> = props => {
   const {title, image} = props.route.params;
   const layout = useWindowDimensions();
 
   const renderScene = SceneMap({
-    first: AddReviewScreen,
-    second: ReadReviewScreen,
+    second: () => <AddReviewScreen title={title} image={image} />,
+    first: () => <ReadReviewScreen title={title} image={image} />,
   });
 
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
     {key: 'first', title: 'Read Review'},
-    {key: 'second', title: 'Add Brands'},
+    {key: 'second', title: 'Add Review'},
   ]);
 
   return (
@@ -66,4 +66,4 @@ const styles = ScaledSheet.create<Style>({
   },
 });
 
-export {BrandDetailScreen};
+export {BrandDetailsScreen};

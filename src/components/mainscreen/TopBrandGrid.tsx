@@ -6,9 +6,11 @@ import {
   ImageSourcePropType,
   ViewStyle,
   ImageStyle,
+  TouchableOpacity,
 } from 'react-native';
 import {Avatar, Button} from 'react-native-paper';
 import {Divider, TextField} from '../common';
+import {useNavigation} from '@react-navigation/native';
 
 interface Props {
   name?: string;
@@ -19,8 +21,13 @@ interface Props {
 
 const TopBrandGrid: React.FC<Props> = props => {
   const {name, text, image, search} = props;
+  const navigation = useNavigation();
   return (
-    <View style={styles.contain()}>
+    <TouchableOpacity
+      style={styles.contain()}
+      onPress={() =>
+        navigation.navigate('BrandDetailsScreen', {title: name, image})
+      }>
       <View style={styles.leftContainer}>
         {image && <Avatar.Image size={80} source={image} />}
         <Divider horizontal large />
@@ -47,7 +54,7 @@ const TopBrandGrid: React.FC<Props> = props => {
           </Button>
         )}
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

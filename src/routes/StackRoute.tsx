@@ -68,7 +68,7 @@ const BrandSearchStack = () => {
         headerShown: false,
       }}>
       <Stack.Screen name="BrandSearchScreen" component={BrandSearchScreen} />
-      <Stack.Screen name="BranndDetailsScreen" component={BrandDetailsScreen} />
+      <Stack.Screen name="BrandDetailsScreen" component={BrandDetailsScreen} />
     </Stack.Navigator>
   );
 };
