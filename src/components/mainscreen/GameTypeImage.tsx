@@ -6,8 +6,10 @@ import {
   ImageSourcePropType,
   ViewStyle,
   ImageStyle,
+  TouchableOpacity,
 } from 'react-native';
 import {Divider, TextField} from '../common';
+import {useNavigation} from '@react-navigation/native';
 
 interface Props {
   title?: string;
@@ -16,15 +18,19 @@ interface Props {
 
 const GameTypeImage: React.FC<Props> = props => {
   const {title, image} = props;
+  const navigation = useNavigation();
+
   return (
-    <View style={styles.contain()}>
+    <TouchableOpacity
+      style={styles.contain()}
+      onPress={() => navigation.navigate('GameDetailScreen', {title, image})}>
       <Divider large />
       <TextField bold medium>
         {title}
       </TextField>
       <Divider small />
       {image && <Image source={image} style={styles.img} />}
-    </View>
+    </TouchableOpacity>
   );
 };
 

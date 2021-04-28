@@ -1,19 +1,49 @@
 import React from 'react';
-import {TextStyle, View, ViewStyle} from 'react-native';
+import {TextStyle, View, ViewStyle, useWindowDimensions} from 'react-native';
 import {ScaledSheet} from 'react-native-size-matters';
 import {backgroundColor} from '../../../constants/colors';
-import {TextField} from '../../../components';
+import {TabView, SceneMap, TabBar} from 'react-native-tab-view';
+import {Container} from '../../../components/common/Container';
+import {AddReviewScreen} from './AddReviewScreen';
+import {ReadReviewScreen} from './ReadReviewScreen';
 
 interface props {
   children?: JSX.Element;
   navigation?: any;
+  route?: any;
 }
 
-const BrandDetailsScreen: React.FC<props> = () => {
+const BrandDetailScreen: React.FC<props> = props => {
+  const {title, image} = props.route.params;
+  const layout = useWindowDimensions();
+
+  const renderScene = SceneMap({
+    first: AddReviewScreen,
+    second: ReadReviewScreen,
+  });
+
+  const [index, setIndex] = React.useState(0);
+  const [routes] = React.useState([
+    {key: 'first', title: 'Read Review'},
+    {key: 'second', title: 'Add Brands'},
+  ]);
+
   return (
-    <View style={styles.container}>
-      <TextField>Brand Details</TextField>
-    </View>
+    <Container header headerTitle={title} back center>
+      <TabView
+        renderTabBar={props => (
+          <TabBar
+            {...props}
+            indicatorStyle={{backgroundColor: 'white'}}
+            style={{backgroundColor: '#a1a1a1'}}
+          />
+        )}
+        navigationState={{index, routes}}
+        renderScene={renderScene}
+        onIndexChange={setIndex}
+        initialLayout={{width: layout.width}}
+      />
+    </Container>
   );
 };
 
@@ -36,4 +66,4 @@ const styles = ScaledSheet.create<Style>({
   },
 });
 
-export {BrandDetailsScreen};
+export {BrandDetailScreen};

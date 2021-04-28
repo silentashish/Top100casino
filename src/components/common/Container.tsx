@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, StyleSheet, TextStyle, ViewStyle} from 'react-native';
+import {backgroundColor} from '../../constants/colors';
 import {Header} from './Header';
 
 interface Props {
@@ -28,6 +29,7 @@ interface Style {
 const styles = StyleSheet.create<Style>({
   contain: (center: boolean) => ({
     flex: 1,
+    backgroundColor: backgroundColor,
   }),
 });
 

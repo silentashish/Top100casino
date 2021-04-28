@@ -7,6 +7,7 @@ import {
   useWindowDimensions,
   Text,
   ScrollView,
+  ImageSourcePropType,
 } from 'react-native';
 import {ScaledSheet} from 'react-native-size-matters';
 import {backgroundColor} from '../../../constants/colors';
@@ -18,14 +19,17 @@ import Image from 'react-native-scalable-image';
 interface props {
   children?: JSX.Element;
   navigation?: any;
+  title?: string;
+  image?: ImageSourcePropType;
 }
 
-const GameReviewScreen: React.FC<props> = () => {
+const GameReviewScreen: React.FC<props> = props => {
+  const {image} = props;
   const {height, width} = useWindowDimensions();
   return (
     <View style={styles.container}>
       <ScrollView>
-        <Image source={Images.GTBaccarat} style={styles.image} width={width} />
+        {image && <Image source={image} style={styles.image} width={width} />}
         <Divider extralarge />
         <Text style={styles.paragraph}>
           Qui proident reprehenderit enim ut adipisicing magna do incididunt

@@ -51,6 +51,18 @@ import GTPoker from './gametype/PokerImage.png';
 import GTRoulette from './gametype/Roulette.png';
 import GTSlotMachine from './gametype/SlotMachine.png';
 
+// brand images
+import Brand1 from './brand/1.png';
+import Brand2 from './brand/2.png';
+import Brand3 from './brand/3.png';
+import Brand4 from './brand/4.png';
+import Brand5 from './brand/5.png';
+import Brand6 from './brand/6.png';
+import Brand7 from './brand/7.png';
+import Brand8 from './brand/8.png';
+import Brand9 from './brand/9.png';
+import Brand10 from './brand/10.png';
+
 export const Images = {
   WelcomeImage,
   Beginner,
@@ -100,4 +112,14 @@ export const Images = {
   GTPoker,
   GTRoulette,
   GTSlotMachine,
+  Brand1,
+  Brand2,
+  Brand3,
+  Brand4,
+  Brand5,
+  Brand6,
+  Brand7,
+  Brand8,
+  Brand9,
+  Brand10,
 };

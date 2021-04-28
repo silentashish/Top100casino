@@ -11,15 +11,17 @@ import {Container} from '../../../components/common/Container';
 interface props {
   children?: JSX.Element;
   navigation?: any;
+  route?: any;
 }
 
-const renderScene = SceneMap({
-  first: GameReviewScreen,
-  second: GameRatingScreen,
-});
-
-const GameDetailScreen: React.FC<props> = () => {
+const GameDetailScreen: React.FC<props> = props => {
+  const {title, image} = props.route.params;
   const layout = useWindowDimensions();
+
+  const renderScene = SceneMap({
+    first: () => <GameReviewScreen {...props.route.params} />,
+    second: GameRatingScreen,
+  });
 
   const [index, setIndex] = React.useState(0);
   const [routes] = React.useState([
@@ -27,7 +29,7 @@ const GameDetailScreen: React.FC<props> = () => {
     {key: 'second', title: 'Top Brands'},
   ]);
   return (
-    <Container header headerTitle="Top 10" back center>
+    <Container header headerTitle={title} back center>
       <TabView
         renderTabBar={props => (
           <TabBar

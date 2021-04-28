@@ -14,10 +14,11 @@ interface Props {
   name?: string;
   text?: string;
   image?: ImageSourcePropType;
+  search?: boolean;
 }
 
 const TopBrandGrid: React.FC<Props> = props => {
-  const {name, text, image} = props;
+  const {name, text, image, search} = props;
   return (
     <View style={styles.contain()}>
       <View style={styles.leftContainer}>
@@ -27,18 +28,24 @@ const TopBrandGrid: React.FC<Props> = props => {
           <TextField bold medium>
             {name}
           </TextField>
-          <Divider small />
-          <TextField>{text}</TextField>
+          {!search && (
+            <>
+              <Divider small />
+              <TextField>{text}</TextField>
+            </>
+          )}
         </View>
       </View>
       <View style={styles.buttonContainer}>
-        <Button
-          mode="outlined"
-          compact
-          color={'#a1a1a1'}
-          contentStyle={styles.buttonStyle}>
-          Read More
-        </Button>
+        {!search && (
+          <Button
+            mode="outlined"
+            compact
+            color={'#a1a1a1'}
+            contentStyle={styles.buttonStyle}>
+            Read More
+          </Button>
+        )}
       </View>
     </View>
   );
