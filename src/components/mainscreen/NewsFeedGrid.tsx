@@ -17,17 +17,22 @@ interface Props {
   name?: string;
 }
 
-const ReviewGrid: React.FC<Props> = props => {
+const NewsFeedGrid: React.FC<Props> = props => {
   const {title, image, name} = props;
   return (
     <View style={styles.contain()}>
       <View style={styles.ratingView}>
         <View style={styles.row}>
-          {image && <Image source={image} style={styles.img} />}
+          {image && <Avatar.Image source={image} size={50} />}
           <Divider horizontal />
-          <TextField medium>{name}</TextField>
+          <TextField medium bold>
+            {name}
+          </TextField>
         </View>
-        <Rating ratingCount={4} imageSize={25} />
+        <View style={styles.timeHeart}>
+          <TextField small>Just Now</TextField>
+          <Rating ratingCount={1} imageSize={30} type="heart" />
+        </View>
       </View>
       <Divider />
       <TextField>
@@ -46,6 +51,7 @@ interface Style {
   img: ImageStyle;
   ratingView: ViewStyle;
   row: ViewStyle;
+  timeHeart: ViewStyle;
 }
 
 const styles = StyleSheet.create<Style>({
@@ -76,11 +82,16 @@ const styles = StyleSheet.create<Style>({
   ratingView: {
     flexDirection: 'row',
     justifyContent: 'space-between',
+    alignItems: 'center',
   },
   row: {
     flexDirection: 'row',
-    // alignItems: 'center',
+    alignItems: 'center',
+  },
+  timeHeart: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
 });
 
-export {ReviewGrid};
+export {NewsFeedGrid};

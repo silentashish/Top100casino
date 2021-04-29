@@ -1,8 +1,9 @@
 import React from 'react';
-import {TextStyle, View, ViewStyle} from 'react-native';
+import {ScrollView, TextStyle, View, ViewStyle} from 'react-native';
 import {ScaledSheet} from 'react-native-size-matters';
 import {backgroundColor} from '../../../constants/colors';
-import {TextField} from '../../../components';
+import {Container, Divider, NewsFeedGrid, TextField} from '../../../components';
+import {Images} from '../../../assets';
 
 interface props {
   children?: JSX.Element;
@@ -11,9 +12,21 @@ interface props {
 
 const NewsFeedScreen: React.FC<props> = () => {
   return (
-    <View style={styles.container}>
-      <TextField>News Feed Screens</TextField>
-    </View>
+    <Container header headerTitle="Casino News Feed" center>
+      <ScrollView>
+        <Divider medium />
+        <NewsFeedGrid image={Images.Brand6} name="check" />
+        <Divider medium />
+        <NewsFeedGrid image={Images.Brand6} name="check" />
+        <Divider medium />
+        <NewsFeedGrid image={Images.Brand6} name="check" />
+        <Divider medium />
+        <NewsFeedGrid image={Images.Brand6} name="check" />
+        <Divider medium />
+        <NewsFeedGrid image={Images.Brand6} name="check" />
+        <Divider medium />
+      </ScrollView>
+    </Container>
   );
 };
 
