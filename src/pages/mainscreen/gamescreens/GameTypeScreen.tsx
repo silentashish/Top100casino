@@ -5,7 +5,7 @@ import {backgroundColor} from '../../../constants/colors';
 
 import {Container} from '../../../components/common/Container';
 import {GameTypeImages} from '../../../data';
-import {GameTypeImage} from '../../../components';
+import {Divider, GameTypeImage} from '../../../components';
 
 interface props {
   children?: JSX.Element;
@@ -19,6 +19,7 @@ const GameTypeScreen: React.FC<props> = () => {
         {GameTypeImages.map(item => {
           return <GameTypeImage {...item} />;
         })}
+        <Divider medium />
       </ScrollView>
     </Container>
   );

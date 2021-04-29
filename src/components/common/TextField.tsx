@@ -60,7 +60,7 @@ const styles = StyleSheet.create<Style>({
     right,
     maxWidth,
   }: Props) => ({
-    fontSize: title ? 35 : large ? 22 : medium ? 18 : small ? 10 : 15,
+    fontSize: title ? 30 : large ? 22 : medium ? 18 : small ? 10 : 15,
     color: color ?? fontColor,
     fontWeight: bold ? 'bold' : null,
     textAlign: center ? 'center' : right ? 'right' : null,

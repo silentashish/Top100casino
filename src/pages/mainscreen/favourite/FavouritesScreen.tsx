@@ -2,7 +2,7 @@ import React from 'react';
 import {TextStyle, View, ViewStyle} from 'react-native';
 import {ScaledSheet} from 'react-native-size-matters';
 import {backgroundColor} from '../../../constants/colors';
-import {TextField} from '../../../components';
+import {Container, NoDataFavourite, TextField} from '../../../components';
 
 interface props {
   children?: JSX.Element;
@@ -11,9 +11,9 @@ interface props {
 
 const FavouritesScreen: React.FC<props> = () => {
   return (
-    <View style={styles.container}>
-      <TextField>Favourites Screens</TextField>
-    </View>
+    <Container header headerTitle="Favourite News" center>
+      <NoDataFavourite />
+    </Container>
   );
 };
 

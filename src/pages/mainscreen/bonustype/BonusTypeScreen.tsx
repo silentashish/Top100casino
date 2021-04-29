@@ -2,7 +2,9 @@ import React from 'react';
 import {TextStyle, View, ViewStyle} from 'react-native';
 import {ScaledSheet} from 'react-native-size-matters';
 import {backgroundColor} from '../../../constants/colors';
-import {TextField} from '../../../components';
+import {Container, Divider, TextField} from '../../../components';
+import {BonusCodeGrid} from '../../../components/mainscreen/BonusCodeGrid';
+import {Images} from '../../../assets';
 
 interface props {
   children?: JSX.Element;
@@ -11,9 +13,30 @@ interface props {
 
 const BonusTypeScreen: React.FC<props> = () => {
   return (
-    <View style={styles.container}>
-      <TextField>Bonus Type Screens</TextField>
-    </View>
+    <Container header headerTitle="Bonus Codes" center>
+      <Divider medium />
+      <BonusCodeGrid
+        image={Images.Brand6}
+        name="Welcome 1"
+        title="100% upto $200 welcome bonus"
+        info="active for 21:58 PM"
+      />
+      <Divider medium />
+      <BonusCodeGrid
+        image={Images.Brand5}
+        name="200Free11"
+        title="200% upto $400 welcome bonus"
+        info="active for 30:58 PM"
+      />
+      <Divider medium />
+      <BonusCodeGrid
+        image={Images.Brand7}
+        name="XCliv20"
+        title="100% upto $100 welcome bonus"
+        info="active for 01:58 PM"
+      />
+      <Divider medium />
+    </Container>
   );
 };
 
