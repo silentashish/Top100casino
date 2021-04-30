@@ -41,7 +41,19 @@ const TabRoute: React.FC<props> = () => {
           activeTintColor: 'tomato',
           inactiveTintColor: 'gray',
         }}>
-        <Tab.Screen name="Game" component={GameScreenStack} />
+        <Tab.Screen
+          name="Game"
+          component={GameScreenStack}
+          listeners={({navigation}) => ({
+            tabPress: e => {
+              // Prevent default action
+              e.preventDefault();
+
+              // Do something with the `navigation` object
+              navigation.navigate('GameTypeScreen'); // Here!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            },
+          })}
+        />
         <Tab.Screen name="Brand" component={BrandSearchStack} />
         <Tab.Screen name="NewsFeed" component={NewsFeedScreen} />
         <Tab.Screen name="BonusType" component={BonusTypeScreen} />

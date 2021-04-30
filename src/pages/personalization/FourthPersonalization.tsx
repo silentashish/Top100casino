@@ -82,19 +82,21 @@ const FourthPersonalizationScreen: React.FC<props> = ({navigation}) => {
           </View>
         </View>
         <View>
-          <Button small>Next</Button>
+          <Button
+            small
+            onPress={() => {
+              navigation.navigate('MainScreen', {
+                screen: 'Game',
+                params: {
+                  screen: 'GameScreen',
+                },
+              });
+            }}>
+            Next
+          </Button>
           <Divider />
           <TextField center>4 / 4</TextField>
           <Divider medium />
-          <TextField
-            medium
-            color="blue"
-            underline
-            right
-            maxWidth={'95%'}
-            onPress={() => navigation.navigate('SignupScreen')}>
-            Skip
-          </TextField>
           <Divider />
         </View>
       </View>

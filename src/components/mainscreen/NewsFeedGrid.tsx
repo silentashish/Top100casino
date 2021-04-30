@@ -6,19 +6,24 @@ import {
   ImageSourcePropType,
   ViewStyle,
   ImageStyle,
+  TouchableOpacity,
 } from 'react-native';
 import {Avatar} from 'react-native-paper';
 import {Rating, AirbnbRating} from 'react-native-ratings';
 import {Divider, TextField} from '../common';
-
+import Icon from 'react-native-vector-icons/Ionicons';
 interface Props {
   title?: string;
   image?: ImageSourcePropType;
   name?: string;
+  id?: number;
+  onPress?: () => void;
+  active?: boolean;
 }
 
 const NewsFeedGrid: React.FC<Props> = props => {
-  const {title, image, name} = props;
+  const {title, image, name, onPress, active} = props;
+
   return (
     <View style={styles.contain()}>
       <View style={styles.ratingView}>
@@ -31,7 +36,14 @@ const NewsFeedGrid: React.FC<Props> = props => {
         </View>
         <View style={styles.timeHeart}>
           <TextField small>Just Now</TextField>
-          <Rating ratingCount={1} imageSize={30} type="heart" />
+          <Divider horizontal />
+          <TouchableOpacity onPress={onPress}>
+            <Icon
+              name={active ? 'heart-sharp' : 'heart-outline'}
+              size={25}
+              color={'red'}
+            />
+          </TouchableOpacity>
         </View>
       </View>
       <Divider />

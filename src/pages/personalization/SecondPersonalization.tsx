@@ -96,7 +96,14 @@ const SecondPersonalizationScreen: React.FC<props> = ({navigation}) => {
             underline
             right
             maxWidth={'95%'}
-            onPress={() => navigation.navigate('SignupScreen')}>
+            onPress={() => {
+              navigation.navigate('MainScreen', {
+                screen: 'Game',
+                params: {
+                  screen: 'GameScreen',
+                },
+              });
+            }}>
             Skip
           </TextField>
           <Divider />

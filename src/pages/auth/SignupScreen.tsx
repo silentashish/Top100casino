@@ -68,7 +68,7 @@ const SignupScreen: React.FC<props> = ({navigation}) => {
             mode={'outlined'}
             label="Username"
             placeholder="Enter Username"
-            onChangeText={val => setUsername(val)}
+            onChangeText={val => setUsername(val.replace(/[0-9]/g, ''))}
             value={username}
           />
           <Divider extralarge />

@@ -27,7 +27,9 @@ const NoDataFavourite: React.FC<Props> = props => {
           Go to the newsfeed and add your favourite news
         </TextField>
         <Divider extralarge />
-        <TouchableOpacity style={styles.addFav}>
+        <TouchableOpacity
+          style={styles.addFav}
+          onPress={() => navigation.navigate('NewsFeed')}>
           <Icon name="plus" color={'#fff'} size={20} />
         </TouchableOpacity>
       </View>
