@@ -6,10 +6,12 @@ interface Props {
   mode?: 'flat' | 'outlined';
   label?: string;
   placeholder?: string;
+  onChangeText?: (val: string) => void;
+  value?: string;
 }
 
 const FormInput: React.FC<Props> = props => {
-  const {mode, label, placeholder} = props;
+  const {mode, label, placeholder, onChangeText, value} = props;
 
   return (
     <View style={styles.wrapperStyle}>
@@ -18,6 +20,8 @@ const FormInput: React.FC<Props> = props => {
         label={label}
         placeholder={placeholder}
         style={styles.inputStyle}
+        onChangeText={onChangeText}
+        value={value}
       />
     </View>
   );

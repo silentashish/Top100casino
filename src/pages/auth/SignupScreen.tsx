@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import {
   StyleSheet,
   TextStyle,
@@ -19,6 +19,7 @@ import {
   Header,
   TextField,
 } from '../../components';
+import {showToast} from '../../utils/Toast';
 
 interface props {
   children?: JSX.Element;
@@ -26,6 +27,31 @@ interface props {
 }
 
 const SignupScreen: React.FC<props> = ({navigation}) => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [newPassword, setNewPassword] = useState('');
+
+  const signupHandlers = () => {
+    if (username === '' || password === '' || newPassword === '') {
+      showToast('Error!', 'Please Enter username and password', false);
+      return;
+    }
+    if (!(password.length > 5)) {
+      showToast('Error!', 'Password must be more than 6', false);
+      return;
+    }
+    if (!(newPassword.length > 5)) {
+      showToast('Error!', 'Password must be more than 6', false);
+      return;
+    }
+    if (password !== newPassword) {
+      showToast('Error!', 'Password must be equal', false);
+      return;
+    }
+    showToast('Success !', 'Your account created successfully', true);
+    navigation.navigate('LoginScreen');
+  };
+
   return (
     <>
       <Header back></Header>
@@ -42,6 +68,8 @@ const SignupScreen: React.FC<props> = ({navigation}) => {
             mode={'outlined'}
             label="Username"
             placeholder="Enter Username"
+            onChangeText={val => setUsername(val)}
+            value={username}
           />
           <Divider extralarge />
           <Divider />
@@ -49,6 +77,8 @@ const SignupScreen: React.FC<props> = ({navigation}) => {
             mode={'outlined'}
             label="Password"
             placeholder="Enter Password"
+            onChangeText={val => setPassword(val)}
+            value={password}
           />
           <Divider extralarge />
           <Divider />
@@ -56,13 +86,13 @@ const SignupScreen: React.FC<props> = ({navigation}) => {
             mode={'outlined'}
             label="Repeat Password"
             placeholder="Enter Password"
+            onChangeText={val => setNewPassword(val)}
+            value={newPassword}
           />
 
           <Divider extralarge />
           <Divider extralarge />
-          <Button onPress={() => navigation.navigate('LoginScreen')}>
-            SIGNUP
-          </Button>
+          <Button onPress={signupHandlers}>SIGNUP</Button>
         </View>
         <View>
           <Divider />

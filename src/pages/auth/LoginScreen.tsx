@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   StyleSheet,
   TextStyle,
@@ -19,6 +19,7 @@ import {
   Header,
   TextField,
 } from '../../components';
+import {showToast} from '../../utils/Toast';
 
 interface props {
   children?: JSX.Element;
@@ -26,6 +27,21 @@ interface props {
 }
 
 const LoginScreen: React.FC<props> = ({navigation}) => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const loginHandlers = () => {
+    if (username === '' && password === '') {
+      showToast('Error!', 'Please Enter username and password', false);
+      return;
+    }
+    if (!(password.length > 5)) {
+      showToast('Error!', 'Password must be more than 6', false);
+      return;
+    }
+    navigation.navigate('FirstPersonalizationScreen');
+  };
+
   return (
     <>
       <Header back></Header>
@@ -40,22 +56,23 @@ const LoginScreen: React.FC<props> = ({navigation}) => {
         <View style={styles.centerItem}>
           <FormInput
             mode={'outlined'}
-            label="Email"
-            placeholder="Enter Email"
+            label="Username"
+            placeholder="Enter Username"
+            onChangeText={val => setUsername(val.replace(/[0-9]/g, ''))}
+            value={username}
           />
           <Divider extralarge />
           <Divider />
           <FormInput
             mode={'outlined'}
             label="Password"
-            placeholder="Enter Email"
+            placeholder="Enter Password"
+            onChangeText={val => setPassword(val)}
+            value={password}
           />
           <Divider extralarge />
           <Divider extralarge />
-          <Button
-            onPress={() => navigation.navigate('FirstPersonalizationScreen')}>
-            Login
-          </Button>
+          <Button onPress={loginHandlers}>Login</Button>
         </View>
         <View>
           <Divider />

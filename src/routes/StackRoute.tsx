@@ -42,16 +42,6 @@ const StackRoute = () => {
       screenOptions={{
         headerShown: false,
       }}>
-      <Stack.Screen name="MainScreen" component={TabRoute} />
-      <Stack.Screen name="GameInnerScreen" component={GameInnerScreen} />
-      <Stack.Screen
-        name="MenuScreen"
-        component={MenuScreen}
-        options={{
-          title: 'MenuScreen',
-          ...TransitionPresets.SlideFromRightIOS,
-        }}
-      />
       <Stack.Screen name="StartScreen" component={StartScreen} />
       <Stack.Screen name="LoginScreen" component={LoginScreen} />
       <Stack.Screen name="SignupScreen" component={SignupScreen} />
@@ -70,6 +60,16 @@ const StackRoute = () => {
       <Stack.Screen
         name="FourthPersonalizationScreen"
         component={FourthPersonalizationScreen}
+      />
+      <Stack.Screen name="MainScreen" component={TabRoute} />
+      <Stack.Screen name="GameInnerScreen" component={GameInnerScreen} />
+      <Stack.Screen
+        name="MenuScreen"
+        component={MenuScreen}
+        options={{
+          title: 'MenuScreen',
+          ...TransitionPresets.SlideFromRightIOS,
+        }}
       />
     </Stack.Navigator>
   );
