@@ -8,7 +8,6 @@ import {
   ImageStyle,
 } from 'react-native';
 import {Avatar} from 'react-native-paper';
-import {Rating, AirbnbRating} from 'react-native-ratings';
 import {Divider, TextField} from '../common';
 
 interface Props {

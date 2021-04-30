@@ -13,7 +13,7 @@ interface props {
 
 const GameScreen: React.FC<props> = () => {
   return (
-    <Container header headerTitle={'Top 10'} center>
+    <Container header headerTitle={'Top 10'} center menu>
       <TitleImage {...trending} />
       <TitleImage {...popular} />
       <TitleImage {...newrelease} />

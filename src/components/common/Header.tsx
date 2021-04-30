@@ -7,9 +7,10 @@ interface Props {
   children?: string;
   back?: boolean;
   center?: boolean;
+  menu?: boolean;
 }
 
-const Header: React.FC<Props> = ({children, back, center}) => {
+const Header: React.FC<Props> = ({children, back, center, menu}) => {
   const navigation = useNavigation();
   return (
     <View style={styles.container}>
@@ -24,6 +25,14 @@ const Header: React.FC<Props> = ({children, back, center}) => {
       <View style={styles.contain(center)}>
         <Text style={styles.text(center)}>{children}</Text>
       </View>
+      {menu && (
+        <Icon
+          name="navicon"
+          color="black"
+          size={25}
+          onPress={() => navigation.navigate('MenuScreen')}
+        />
+      )}
     </View>
   );
 };
@@ -42,15 +51,16 @@ const styles = StyleSheet.create<Style>({
     alignItems: 'center',
     paddingHorizontal: 10,
     elevation: 5,
+    justifyContent: 'space-between',
   },
   contain: (center: boolean) => ({
-    width: '100%',
     paddingLeft: '4%',
     alignSelf: 'center',
     paddingVertical: 15,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: center ? 'center' : null,
+    flex: 1,
   }),
   text: (center: boolean) => ({
     fontSize: 22,

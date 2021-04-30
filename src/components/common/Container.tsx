@@ -9,6 +9,7 @@ interface Props {
   headerTitle?: string;
   back?: boolean;
   center?: boolean;
+  menu?: boolean;
 }
 
 const Container: React.FC<Props> = props => {

@@ -1,5 +1,9 @@
 import * as React from 'react';
-import {createStackNavigator} from '@react-navigation/stack';
+import {
+  createStackNavigator,
+  CardStyleInterpolators,
+  TransitionPresets,
+} from '@react-navigation/stack';
 import {
   LoginScreen,
   SignupScreen,
@@ -13,10 +17,24 @@ import {
   BrandSearchScreen,
   BrandDetailsScreen,
   GameTypeScreen,
+  GameInnerScreen,
+  MenuScreen,
 } from '../pages';
 import {TabRoute} from './TabRoute';
 
 const Stack = createStackNavigator();
+
+const config = {
+  animation: 'spring',
+  config: {
+    stiffness: 1000,
+    damping: 500,
+    mass: 3,
+    overshootClamping: true,
+    restDisplacementThreshold: 0.01,
+    restSpeedThreshold: 0.01,
+  },
+};
 
 const StackRoute = () => {
   return (
@@ -25,6 +43,15 @@ const StackRoute = () => {
         headerShown: false,
       }}>
       <Stack.Screen name="MainScreen" component={TabRoute} />
+      <Stack.Screen name="GameInnerScreen" component={GameInnerScreen} />
+      <Stack.Screen
+        name="MenuScreen"
+        component={MenuScreen}
+        options={{
+          title: 'MenuScreen',
+          ...TransitionPresets.SlideFromRightIOS,
+        }}
+      />
       <Stack.Screen name="StartScreen" component={StartScreen} />
       <Stack.Screen name="LoginScreen" component={LoginScreen} />
       <Stack.Screen name="SignupScreen" component={SignupScreen} />
@@ -54,8 +81,8 @@ const GameScreenStack = () => {
       screenOptions={{
         headerShown: false,
       }}>
-      <Stack.Screen name="GameTypeScreen" component={GameTypeScreen} />
       <Stack.Screen name="GameScreen" component={GameScreen} />
+      <Stack.Screen name="GameTypeScreen" component={GameTypeScreen} />
       <Stack.Screen name="GameDetailScreen" component={GameDetailScreen} />
     </Stack.Navigator>
   );
