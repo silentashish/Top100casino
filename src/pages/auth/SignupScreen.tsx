@@ -6,6 +6,7 @@ import {
   ViewStyle,
   Image,
   ImageStyle,
+  SafeAreaView
 } from 'react-native';
 import {ScaledSheet} from 'react-native-size-matters';
 import {Images} from '../../assets';

@@ -1,4 +1,4 @@
-package com.top10onlinecasino;
+package com.top100casino;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "Top10OnlineCasino";
+    return "Top100Casino";
   }
 }

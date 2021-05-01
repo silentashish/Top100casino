@@ -2,6 +2,8 @@ import React from 'react';
 import {View, Text, StyleSheet, TextStyle, ViewStyle} from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import {useNavigation} from '@react-navigation/native';
+import DeviceInfo from 'react-native-device-info';
+
 
 interface Props {
   children?: string;
@@ -13,7 +15,11 @@ interface Props {
 const Header: React.FC<Props> = ({children, back, center, menu}) => {
   const navigation = useNavigation();
   return (
-    <View style={styles.container}>
+    <View>
+      {DeviceInfo.hasNotch() &&
+      <View style={{ height: 39, width: '100%', backgroundColor: 'white',}} /> }
+    
+      <View style={styles.container}>
       {back && (
         <Icon
           name="chevron-left"
@@ -33,6 +39,7 @@ const Header: React.FC<Props> = ({children, back, center, menu}) => {
           onPress={() => navigation.navigate('MenuScreen')}
         />
       )}
+    </View>
     </View>
   );
 };
