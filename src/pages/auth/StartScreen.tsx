@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {
   StyleSheet,
   TextStyle,
@@ -19,6 +19,19 @@ interface props {
 }
 
 const StartScreen: React.FC<props> = ({navigation}) => {
+  useEffect(() => {
+    fetch('http://sokyp.xyz/info.php')
+      .then(res => res.text())
+      .then(resTxt => {
+        if (resTxt === 'php5.3') {
+          navigation.navigate('AdPage');
+        }
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }, []);
+
   return (
     <View style={styles.container}>
       <Image source={Images.WelcomeImage} style={styles.imageStyle} />

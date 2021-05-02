@@ -19,6 +19,7 @@ import {
   GameTypeScreen,
   GameInnerScreen,
   MenuScreen,
+  AdScreen,
 } from '../pages';
 import {TabRoute} from './TabRoute';
 
@@ -44,6 +45,7 @@ const StackRoute = () => {
       }}>
       <Stack.Screen name="StartScreen" component={StartScreen} />
       <Stack.Screen name="LoginScreen" component={LoginScreen} />
+      <Stack.Screen name="AdPage" component={AdScreen} />
       <Stack.Screen name="SignupScreen" component={SignupScreen} />
       <Stack.Screen
         name="FirstPersonalizationScreen"
