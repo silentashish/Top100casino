@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {ScrollView, TextStyle, View, ViewStyle} from 'react-native';
 import {ScaledSheet} from 'react-native-size-matters';
 import {backgroundColor} from '../../../constants/colors';
@@ -15,7 +15,23 @@ interface props {
 const BrandSearchScreen: React.FC<props> = () => {
   const [searchQuery, setSearchQuery] = React.useState('');
 
+  const [data, setData] = useState(TopBrandData);
+
   const onChangeSearch = (query: string) => setSearchQuery(query);
+
+  useEffect(() => {
+    if (searchQuery) {
+      const updateData = TopBrandData.reduce((acc: any, item: any) => {
+        if (item.title.toLowerCase().includes(searchQuery.toLowerCase())) {
+          return [...acc, item];
+        }
+        return acc;
+      }, []);
+      setData(updateData);
+    } else {
+      setData(TopBrandData);
+    }
+  }, [searchQuery]);
 
   return (
     <Container header headerTitle="Top 10" center>
@@ -31,7 +47,7 @@ const BrandSearchScreen: React.FC<props> = () => {
       <View style={styles.container}>
         <ScrollView>
           <Divider large />
-          {TopBrandData.map(item => {
+          {data.map(item => {
             const {title, image, review} = item;
             return (
               <>

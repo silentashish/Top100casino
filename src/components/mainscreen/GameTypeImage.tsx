@@ -14,16 +14,19 @@ import {useNavigation} from '@react-navigation/native';
 interface Props {
   title?: string;
   image?: ImageSourcePropType;
+  details?: Array<string>;
 }
 
 const GameTypeImage: React.FC<Props> = props => {
-  const {title, image} = props;
+  const {title, image, details} = props;
   const navigation = useNavigation();
 
   return (
     <TouchableOpacity
       style={styles.contain()}
-      onPress={() => navigation.navigate('GameDetailScreen', {title, image})}>
+      onPress={() =>
+        navigation.navigate('GameDetailScreen', {title, image, details})
+      }>
       <Divider large />
       <TextField bold medium>
         {title}

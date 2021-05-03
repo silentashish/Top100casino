@@ -21,50 +21,25 @@ interface props {
   navigation?: any;
   title?: string;
   image?: ImageSourcePropType;
+  details?: Array<string>;
 }
 
 const GameReviewScreen: React.FC<props> = props => {
-  const {image} = props;
+  const {image, details} = props;
   const {height, width} = useWindowDimensions();
   return (
     <View style={styles.container}>
       <ScrollView>
         {image && <Image source={image} style={styles.image} width={width} />}
         <Divider extralarge />
-        <Text style={styles.paragraph}>
-          Qui proident reprehenderit enim ut adipisicing magna do incididunt
-          irure sit tempor sunt voluptate laborum. Nisi dolore ad id ad veniam
-          nostrud nulla duis ex qui tempor. Pariatur esse esse amet quis. Nisi
-          irure exercitation cillum exercitation Lorem tempor excepteur commodo.
-          Culpa consequat fugiat cupidatat consectetur eiusmod dolor culpa aute
-          est ullamco enim velit veniam. Nostrud id aliquip excepteur officia
-          duis officia. Labore quis non nisi do nulla et. Cillum ullamco magna
-          veniam sit enim laborum non duis cupidatat consequat quis. Duis
-          laborum consectetur nulla cupidatat irure ex aute Lorem culpa.
-          Consequat ad ea irure reprehenderit. Amet sunt magna ad in laborum
-          dolore adipisicing consequat duis deserunt laborum. Anim fugiat dolor
-          duis ipsum dolore do dolore. Occaecat minim aliqua deserunt cupidatat
-          consectetur. Et pariatur culpa velit cupidatat. Adipisicing officia
-          sit officia occaecat anim.
-        </Text>
-        <Divider extralarge />
-        <Text style={styles.paragraph}>
-          Qui proident reprehenderit enim ut adipisicing magna do incididunt
-          irure sit tempor sunt voluptate laborum. Nisi dolore ad id ad veniam
-          nostrud nulla duis ex qui tempor. Pariatur esse esse amet quis. Nisi
-          irure exercitation cillum exercitation Lorem tempor excepteur commodo.
-          Culpa consequat fugiat cupidatat consectetur eiusmod dolor culpa aute
-          est ullamco enim velit veniam. Nostrud id aliquip excepteur officia
-          duis officia. Labore quis non nisi do nulla et. Cillum ullamco magna
-          veniam sit enim laborum non duis cupidatat consequat quis. Duis
-          laborum consectetur nulla cupidatat irure ex aute Lorem culpa.
-          Consequat ad ea irure reprehenderit. Amet sunt magna ad in laborum
-          dolore adipisicing consequat duis deserunt laborum. Anim fugiat dolor
-          duis ipsum dolore do dolore. Occaecat minim aliqua deserunt cupidatat
-          consectetur. Et pariatur culpa velit cupidatat. Adipisicing officia
-          sit officia occaecat anim.
-        </Text>
-        <Divider extralarge />
+        {details.map(item => {
+          return (
+            <>
+              <Text style={styles.paragraph}>{item}</Text>
+              <Divider extralarge />
+            </>
+          );
+        })}
       </ScrollView>
     </View>
   );
