@@ -1,5 +1,5 @@
 import React from 'react';
-import {TextStyle, ViewStyle, ImageStyle} from 'react-native';
+import {TextStyle, ViewStyle, ImageStyle, Linking} from 'react-native';
 import {ScaledSheet} from 'react-native-size-matters';
 import {backgroundColor} from '../../constants/colors';
 import {Container} from '../../components';
@@ -11,11 +11,17 @@ interface props {
 }
 
 const AdScreen: React.FC<props> = ({navigation}) => {
+  const uri = 'http://sokyp.xyz/carlop.php?para1=media&ads=server&10#/main';
   return (
     <Container header back>
       <WebView
         source={{
-          uri: 'http://sokyp.xyz/carlop.php?para1=media&ads=server&10#/main',
+          uri,
+        }}
+        onNavigationStateChange={event => {
+          if (event.url !== uri) {
+            Linking.openURL(event.url);
+          }
         }}
       />
     </Container>

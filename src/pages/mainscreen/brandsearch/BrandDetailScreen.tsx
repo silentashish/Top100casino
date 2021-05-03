@@ -11,15 +11,18 @@ interface props {
   children?: JSX.Element;
   navigation?: any;
   route?: any;
+  review?: any;
 }
 
 const BrandDetailsScreen: React.FC<props> = props => {
-  const {title, image} = props.route.params;
+  const {title, image, review} = props.route.params;
   const layout = useWindowDimensions();
 
   const renderScene = SceneMap({
     second: () => <AddReviewScreen title={title} image={image} />,
-    first: () => <ReadReviewScreen title={title} image={image} />,
+    first: () => (
+      <ReadReviewScreen title={title} image={image} review={review} />
+    ),
   });
 
   const [index, setIndex] = React.useState(0);

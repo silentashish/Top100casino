@@ -15,27 +15,23 @@ interface Props {
   title?: string;
   image?: ImageSourcePropType;
   name?: string;
+  value?: string;
 }
 
 const ReviewGrid: React.FC<Props> = props => {
-  const {title, image, name} = props;
+  const {title, image, name, value} = props;
   return (
     <View style={styles.contain()}>
       <View style={styles.ratingView}>
         <View style={styles.row}>
           {image && <Image source={image} style={styles.img} />}
           <Divider horizontal />
-          <TextField medium>{name}</TextField>
+          <TextField medium>{title}</TextField>
         </View>
         <Rating ratingCount={4} imageSize={25} />
       </View>
       <Divider />
-      <TextField>
-        Sit commodo Lorem quis ullamco sint. Enim amet amet veniam tempor
-        nostrud tempor. Officia fugiat adipisicing deserunt in ad cupidatat
-        pariatur. Veniam proident consequat voluptate dolor. Amet officia
-        pariatur nisi incididunt non.
-      </TextField>
+      <TextField>{value}</TextField>
     </View>
   );
 };

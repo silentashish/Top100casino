@@ -4,7 +4,6 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import {useNavigation} from '@react-navigation/native';
 import DeviceInfo from 'react-native-device-info';
 
-
 interface Props {
   children?: string;
   back?: boolean;
@@ -16,30 +15,30 @@ const Header: React.FC<Props> = ({children, back, center, menu}) => {
   const navigation = useNavigation();
   return (
     <View>
-      {DeviceInfo.hasNotch() &&
+      {/* {DeviceInfo.hasNotch() &&
       <View style={{ height: 39, width: '100%', backgroundColor: 'white',}} /> }
-    
+     */}
       <View style={styles.container}>
-      {back && (
-        <Icon
-          name="chevron-left"
-          color="black"
-          size={25}
-          onPress={() => navigation.goBack()}
-        />
-      )}
-      <View style={styles.contain(center)}>
-        <Text style={styles.text(center)}>{children}</Text>
+        {back && (
+          <Icon
+            name="chevron-left"
+            color="black"
+            size={25}
+            onPress={() => navigation.goBack()}
+          />
+        )}
+        <View style={styles.contain(center)}>
+          <Text style={styles.text(center)}>{children}</Text>
+        </View>
+        {menu && (
+          <Icon
+            name="navicon"
+            color="black"
+            size={25}
+            onPress={() => navigation.navigate('MenuScreen')}
+          />
+        )}
       </View>
-      {menu && (
-        <Icon
-          name="navicon"
-          color="black"
-          size={25}
-          onPress={() => navigation.navigate('MenuScreen')}
-        />
-      )}
-    </View>
     </View>
   );
 };

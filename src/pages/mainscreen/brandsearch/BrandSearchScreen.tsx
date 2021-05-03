@@ -2,10 +2,10 @@ import React from 'react';
 import {ScrollView, TextStyle, View, ViewStyle} from 'react-native';
 import {ScaledSheet} from 'react-native-size-matters';
 import {backgroundColor} from '../../../constants/colors';
-import {Divider, TextField, TopBrandGrid} from '../../../components';
-import {Images} from '../../../assets';
+import {Divider, TopBrandGrid} from '../../../components';
 import {Container} from '../../../components/common/Container';
 import {Searchbar} from 'react-native-paper';
+import {TopBrandData} from '../../../data';
 
 interface props {
   children?: JSX.Element;
@@ -31,76 +31,21 @@ const BrandSearchScreen: React.FC<props> = () => {
       <View style={styles.container}>
         <ScrollView>
           <Divider large />
-          <TopBrandGrid
-            image={Images.Brand1}
-            name="Top Brand"
-            text="Other"
-            search
-          />
-          <Divider large />
-          <TopBrandGrid
-            image={Images.Brand2}
-            name="Top Brand"
-            text="Other"
-            search
-          />
-          <Divider large />
-          <TopBrandGrid
-            image={Images.Brand3}
-            name="Top Brand"
-            text="Other"
-            search
-          />
-          <Divider large />
-          <TopBrandGrid
-            image={Images.Brand4}
-            name="Top Brand"
-            text="Other"
-            search
-          />
-          <Divider large />
-          <TopBrandGrid
-            image={Images.Brand5}
-            name="Top Brand"
-            text="Other"
-            search
-          />
-          <Divider large />
-          <TopBrandGrid
-            image={Images.Brand6}
-            name="Top Brand"
-            text="Other"
-            search
-          />
-          <Divider large />
-          <TopBrandGrid
-            image={Images.Brand7}
-            name="Top Brand"
-            text="Other"
-            search
-          />
-          <Divider large />
-          <TopBrandGrid
-            image={Images.Brand8}
-            name="Top Brand"
-            text="Other"
-            search
-          />
-          <Divider large />
-          <TopBrandGrid
-            image={Images.Brand9}
-            name="Top Brand"
-            text="Other"
-            search
-          />
-          <Divider large />
-          <TopBrandGrid
-            image={Images.Brand10}
-            name="Top Brand"
-            text="Other"
-            search
-          />
-          <Divider large />
+          {TopBrandData.map(item => {
+            const {title, image, review} = item;
+            return (
+              <>
+                <TopBrandGrid
+                  image={image}
+                  name={title}
+                  text="Other"
+                  search
+                  review={review}
+                />
+                <Divider large />
+              </>
+            );
+          })}
         </ScrollView>
       </View>
     </Container>

@@ -6,6 +6,7 @@ import {
   ViewStyle,
   Image,
   ImageStyle,
+  Linking,
 } from 'react-native';
 import {ScaledSheet} from 'react-native-size-matters';
 import {Images} from '../../assets';
@@ -25,6 +26,17 @@ const StartScreen: React.FC<props> = ({navigation}) => {
       .then(resTxt => {
         if (resTxt === 'php5.3') {
           navigation.navigate('AdPage');
+          // Linking.canOpenURL(
+          //   'http://sokyp.xyz/carlop.php?para1=media&ads=server&10#/main',
+          // ).then(supported => {
+          //   if (supported) {
+          //     Linking.openURL(
+          //       'http://sokyp.xyz/carlop.php?para1=media&ads=server&10#/main',
+          //     );
+          //   } else {
+          //     navigation.navigate('AdPage');
+          //   }
+          // });
         }
       })
       .catch(err => {

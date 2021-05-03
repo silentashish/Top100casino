@@ -5,6 +5,7 @@ import {backgroundColor} from '../../../constants/colors';
 import {Divider, TextField, TopBrandGrid} from '../../../components';
 import {TabView, SceneMap} from 'react-native-tab-view';
 import {Images} from '../../../assets';
+import {TopBrandData} from '../../../data';
 
 interface props {
   children?: JSX.Element;
@@ -16,26 +17,20 @@ const GameRatingScreen: React.FC<props> = () => {
     <View style={styles.container}>
       <ScrollView>
         <Divider large />
-        <TopBrandGrid image={Images.Brand1} name="Top Brand" text="Other" />
-        <Divider large />
-        <TopBrandGrid image={Images.Brand2} name="Top Brand" text="Other" />
-        <Divider large />
-        <TopBrandGrid image={Images.Brand3} name="Top Brand" text="Other" />
-        <Divider large />
-        <TopBrandGrid image={Images.Brand4} name="Top Brand" text="Other" />
-        <Divider large />
-        <TopBrandGrid image={Images.Brand5} name="Top Brand" text="Other" />
-        <Divider large />
-        <TopBrandGrid image={Images.Brand6} name="Top Brand" text="Other" />
-        <Divider large />
-        <TopBrandGrid image={Images.Brand7} name="Top Brand" text="Other" />
-        <Divider large />
-        <TopBrandGrid image={Images.Brand8} name="Top Brand" text="Other" />
-        <Divider large />
-        <TopBrandGrid image={Images.Brand9} name="Top Brand" text="Other" />
-        <Divider large />
-        <TopBrandGrid image={Images.Brand10} name="Top Brand" text="Other" />
-        <Divider large />
+        {TopBrandData.map(item => {
+          const {image, title, review} = item;
+          return (
+            <>
+              <TopBrandGrid
+                image={image}
+                name={title}
+                text="Other"
+                review={review}
+              />
+              <Divider large />
+            </>
+          );
+        })}
       </ScrollView>
     </View>
   );

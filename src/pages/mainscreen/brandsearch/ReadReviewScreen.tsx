@@ -19,10 +19,11 @@ interface props {
   children?: JSX.Element;
   image?: ImageSourcePropType;
   title?: string;
+  review?: any;
 }
 
 const ReadReviewScreen: React.FC<props> = props => {
-  const {image, title} = props;
+  const {image, title, review} = props;
   const {width} = useWindowDimensions();
 
   return (
@@ -55,11 +56,21 @@ const ReadReviewScreen: React.FC<props> = props => {
         </View>
 
         <Divider extralarge />
-        <ReviewGrid title={'check'} image={Images.Brand5} name={'User one'} />
-        <Divider extralarge />
-
-        <ReviewGrid title={'check'} image={Images.Brand5} name={'User one'} />
-        <Divider extralarge />
+        {review &&
+          review.map(item => {
+            const {title, value} = item;
+            return (
+              <>
+                <ReviewGrid
+                  title={title}
+                  image={image}
+                  name={'User one'}
+                  value={value}
+                />
+                <Divider extralarge />
+              </>
+            );
+          })}
       </ScrollView>
     </View>
   );

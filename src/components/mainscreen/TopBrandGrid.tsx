@@ -17,16 +17,17 @@ interface Props {
   text?: string;
   image?: ImageSourcePropType;
   search?: boolean;
+  review?: any;
 }
 
 const TopBrandGrid: React.FC<Props> = props => {
-  const {name, text, image, search} = props;
+  const {name, text, image, search, review} = props;
   const navigation = useNavigation();
   return (
     <TouchableOpacity
       style={styles.contain()}
       onPress={() =>
-        navigation.navigate('BrandDetailsScreen', {title: name, image})
+        navigation.navigate('BrandDetailsScreen', {title: name, image, review})
       }>
       <View style={styles.leftContainer}>
         {image && <Avatar.Image size={80} source={image} />}
