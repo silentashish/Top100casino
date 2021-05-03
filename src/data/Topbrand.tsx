@@ -7,13 +7,20 @@ export const TopBrandData = [
     review: [
       {
         title: 'User 1',
-        value:
-          'Sit proident ut nisi nulla nisi laboris id. Quis pariatur sunt non laboris dolore reprehenderit. Est ullamco quis commodo duis duis aliquip. Qui laboris aute aliquip aliqua magna nisi aliquip proident.',
+        value: 'CHECK NOW THE EXCLUSIVE WELCOME BONUS ON BOVADA',
       },
       {
         title: 'User 2',
+        value: 'NO DEPOSIT BONUS FROM 200$ ON JACKPOT CITY',
+      },
+      {
+        title: 'User 3',
         value:
-          'Sit proident ut nisi nulla nisi laboris id. Quis pariatur sunt non laboris dolore reprehenderit. Est ullamco quis commodo duis duis aliquip. Qui laboris aute aliquip aliqua magna nisi aliquip proident.',
+          'GET READY FOR THE BEST JACKPOT PRICE ONLY TODAY & TOMORROW ON RAGING BULL',
+      },
+      {
+        title: 'User 4',
+        value: 'MAJOR UPDATE REVIEW OF ALL CASINO BRANDS! CHECK NOW!',
       },
     ],
   },
@@ -23,13 +30,20 @@ export const TopBrandData = [
     review: [
       {
         title: 'User 1',
-        value:
-          'Sit proident ut nisi nulla nisi laboris id. Quis pariatur sunt non laboris dolore reprehenderit. Est ullamco quis commodo duis duis aliquip. Qui laboris aute aliquip aliqua magna nisi aliquip proident.',
+        value: 'CHECK NOW THE EXCLUSIVE WELCOME BONUS ON BOVADA',
       },
       {
         title: 'User 2',
+        value: 'NO DEPOSIT BONUS FROM 200$ ON JACKPOT CITY',
+      },
+      {
+        title: 'User 3',
         value:
-          'Sit proident ut nisi nulla nisi laboris id. Quis pariatur sunt non laboris dolore reprehenderit. Est ullamco quis commodo duis duis aliquip. Qui laboris aute aliquip aliqua magna nisi aliquip proident.',
+          'GET READY FOR THE BEST JACKPOT PRICE ONLY TODAY & TOMORROW ON RAGING BULL',
+      },
+      {
+        title: 'User 4',
+        value: 'MAJOR UPDATE REVIEW OF ALL CASINO BRANDS! CHECK NOW!',
       },
     ],
   },
@@ -39,13 +53,20 @@ export const TopBrandData = [
     review: [
       {
         title: 'User 1',
-        value:
-          'Sit proident ut nisi nulla nisi laboris id. Quis pariatur sunt non laboris dolore reprehenderit. Est ullamco quis commodo duis duis aliquip. Qui laboris aute aliquip aliqua magna nisi aliquip proident.',
+        value: 'CHECK NOW THE EXCLUSIVE WELCOME BONUS ON BOVADA',
       },
       {
         title: 'User 2',
+        value: 'NO DEPOSIT BONUS FROM 200$ ON JACKPOT CITY',
+      },
+      {
+        title: 'User 3',
         value:
-          'Sit proident ut nisi nulla nisi laboris id. Quis pariatur sunt non laboris dolore reprehenderit. Est ullamco quis commodo duis duis aliquip. Qui laboris aute aliquip aliqua magna nisi aliquip proident.',
+          'GET READY FOR THE BEST JACKPOT PRICE ONLY TODAY & TOMORROW ON RAGING BULL',
+      },
+      {
+        title: 'User 4',
+        value: 'MAJOR UPDATE REVIEW OF ALL CASINO BRANDS! CHECK NOW!',
       },
     ],
   },
@@ -55,13 +76,20 @@ export const TopBrandData = [
     review: [
       {
         title: 'User 1',
-        value:
-          'Sit proident ut nisi nulla nisi laboris id. Quis pariatur sunt non laboris dolore reprehenderit. Est ullamco quis commodo duis duis aliquip. Qui laboris aute aliquip aliqua magna nisi aliquip proident.',
+        value: 'CHECK NOW THE EXCLUSIVE WELCOME BONUS ON BOVADA',
       },
       {
         title: 'User 2',
+        value: 'NO DEPOSIT BONUS FROM 200$ ON JACKPOT CITY',
+      },
+      {
+        title: 'User 3',
         value:
-          'Sit proident ut nisi nulla nisi laboris id. Quis pariatur sunt non laboris dolore reprehenderit. Est ullamco quis commodo duis duis aliquip. Qui laboris aute aliquip aliqua magna nisi aliquip proident.',
+          'GET READY FOR THE BEST JACKPOT PRICE ONLY TODAY & TOMORROW ON RAGING BULL',
+      },
+      {
+        title: 'User 4',
+        value: 'MAJOR UPDATE REVIEW OF ALL CASINO BRANDS! CHECK NOW!',
       },
     ],
   },
@@ -71,13 +99,20 @@ export const TopBrandData = [
     review: [
       {
         title: 'User 1',
-        value:
-          'Sit proident ut nisi nulla nisi laboris id. Quis pariatur sunt non laboris dolore reprehenderit. Est ullamco quis commodo duis duis aliquip. Qui laboris aute aliquip aliqua magna nisi aliquip proident.',
+        value: 'CHECK NOW THE EXCLUSIVE WELCOME BONUS ON BOVADA',
       },
       {
         title: 'User 2',
+        value: 'NO DEPOSIT BONUS FROM 200$ ON JACKPOT CITY',
+      },
+      {
+        title: 'User 3',
         value:
-          'Sit proident ut nisi nulla nisi laboris id. Quis pariatur sunt non laboris dolore reprehenderit. Est ullamco quis commodo duis duis aliquip. Qui laboris aute aliquip aliqua magna nisi aliquip proident.',
+          'GET READY FOR THE BEST JACKPOT PRICE ONLY TODAY & TOMORROW ON RAGING BULL',
+      },
+      {
+        title: 'User 4',
+        value: 'MAJOR UPDATE REVIEW OF ALL CASINO BRANDS! CHECK NOW!',
       },
     ],
   },
@@ -87,13 +122,20 @@ export const TopBrandData = [
     review: [
       {
         title: 'User 1',
-        value:
-          'Sit proident ut nisi nulla nisi laboris id. Quis pariatur sunt non laboris dolore reprehenderit. Est ullamco quis commodo duis duis aliquip. Qui laboris aute aliquip aliqua magna nisi aliquip proident.',
+        value: 'CHECK NOW THE EXCLUSIVE WELCOME BONUS ON BOVADA',
       },
       {
         title: 'User 2',
+        value: 'NO DEPOSIT BONUS FROM 200$ ON JACKPOT CITY',
+      },
+      {
+        title: 'User 3',
         value:
-          'Sit proident ut nisi nulla nisi laboris id. Quis pariatur sunt non laboris dolore reprehenderit. Est ullamco quis commodo duis duis aliquip. Qui laboris aute aliquip aliqua magna nisi aliquip proident.',
+          'GET READY FOR THE BEST JACKPOT PRICE ONLY TODAY & TOMORROW ON RAGING BULL',
+      },
+      {
+        title: 'User 4',
+        value: 'MAJOR UPDATE REVIEW OF ALL CASINO BRANDS! CHECK NOW!',
       },
     ],
   },
@@ -103,13 +145,20 @@ export const TopBrandData = [
     review: [
       {
         title: 'User 1',
-        value:
-          'Sit proident ut nisi nulla nisi laboris id. Quis pariatur sunt non laboris dolore reprehenderit. Est ullamco quis commodo duis duis aliquip. Qui laboris aute aliquip aliqua magna nisi aliquip proident.',
+        value: 'CHECK NOW THE EXCLUSIVE WELCOME BONUS ON BOVADA',
       },
       {
         title: 'User 2',
+        value: 'NO DEPOSIT BONUS FROM 200$ ON JACKPOT CITY',
+      },
+      {
+        title: 'User 3',
         value:
-          'Sit proident ut nisi nulla nisi laboris id. Quis pariatur sunt non laboris dolore reprehenderit. Est ullamco quis commodo duis duis aliquip. Qui laboris aute aliquip aliqua magna nisi aliquip proident.',
+          'GET READY FOR THE BEST JACKPOT PRICE ONLY TODAY & TOMORROW ON RAGING BULL',
+      },
+      {
+        title: 'User 4',
+        value: 'MAJOR UPDATE REVIEW OF ALL CASINO BRANDS! CHECK NOW!',
       },
     ],
   },
@@ -119,13 +168,20 @@ export const TopBrandData = [
     review: [
       {
         title: 'User 1',
-        value:
-          'Sit proident ut nisi nulla nisi laboris id. Quis pariatur sunt non laboris dolore reprehenderit. Est ullamco quis commodo duis duis aliquip. Qui laboris aute aliquip aliqua magna nisi aliquip proident.',
+        value: 'CHECK NOW THE EXCLUSIVE WELCOME BONUS ON BOVADA',
       },
       {
         title: 'User 2',
+        value: 'NO DEPOSIT BONUS FROM 200$ ON JACKPOT CITY',
+      },
+      {
+        title: 'User 3',
         value:
-          'Sit proident ut nisi nulla nisi laboris id. Quis pariatur sunt non laboris dolore reprehenderit. Est ullamco quis commodo duis duis aliquip. Qui laboris aute aliquip aliqua magna nisi aliquip proident.',
+          'GET READY FOR THE BEST JACKPOT PRICE ONLY TODAY & TOMORROW ON RAGING BULL',
+      },
+      {
+        title: 'User 4',
+        value: 'MAJOR UPDATE REVIEW OF ALL CASINO BRANDS! CHECK NOW!',
       },
     ],
   },
@@ -135,13 +191,20 @@ export const TopBrandData = [
     review: [
       {
         title: 'User 1',
-        value:
-          'Sit proident ut nisi nulla nisi laboris id. Quis pariatur sunt non laboris dolore reprehenderit. Est ullamco quis commodo duis duis aliquip. Qui laboris aute aliquip aliqua magna nisi aliquip proident.',
+        value: 'CHECK NOW THE EXCLUSIVE WELCOME BONUS ON BOVADA',
       },
       {
         title: 'User 2',
+        value: 'NO DEPOSIT BONUS FROM 200$ ON JACKPOT CITY',
+      },
+      {
+        title: 'User 3',
         value:
-          'Sit proident ut nisi nulla nisi laboris id. Quis pariatur sunt non laboris dolore reprehenderit. Est ullamco quis commodo duis duis aliquip. Qui laboris aute aliquip aliqua magna nisi aliquip proident.',
+          'GET READY FOR THE BEST JACKPOT PRICE ONLY TODAY & TOMORROW ON RAGING BULL',
+      },
+      {
+        title: 'User 4',
+        value: 'MAJOR UPDATE REVIEW OF ALL CASINO BRANDS! CHECK NOW!',
       },
     ],
   },
@@ -151,13 +214,20 @@ export const TopBrandData = [
     review: [
       {
         title: 'User 1',
-        value:
-          'Sit proident ut nisi nulla nisi laboris id. Quis pariatur sunt non laboris dolore reprehenderit. Est ullamco quis commodo duis duis aliquip. Qui laboris aute aliquip aliqua magna nisi aliquip proident.',
+        value: 'CHECK NOW THE EXCLUSIVE WELCOME BONUS ON BOVADA',
       },
       {
         title: 'User 2',
+        value: 'NO DEPOSIT BONUS FROM 200$ ON JACKPOT CITY',
+      },
+      {
+        title: 'User 3',
         value:
-          'Sit proident ut nisi nulla nisi laboris id. Quis pariatur sunt non laboris dolore reprehenderit. Est ullamco quis commodo duis duis aliquip. Qui laboris aute aliquip aliqua magna nisi aliquip proident.',
+          'GET READY FOR THE BEST JACKPOT PRICE ONLY TODAY & TOMORROW ON RAGING BULL',
+      },
+      {
+        title: 'User 4',
+        value: 'MAJOR UPDATE REVIEW OF ALL CASINO BRANDS! CHECK NOW!',
       },
     ],
   },
