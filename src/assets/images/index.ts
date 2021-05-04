@@ -20,6 +20,7 @@ import BrandIcon from './2.png';
 import NewsFeedIcon from './3.png';
 import FavIcon from './5.png';
 import BonusIcon from './4.png';
+import Splash from './splash.png';
 
 // main screens images list in here
 import MainScreen1 from './mainscreen/1.png';
@@ -122,4 +123,5 @@ export const Images = {
   Brand8,
   Brand9,
   Brand10,
+  Splash,
 };

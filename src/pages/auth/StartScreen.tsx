@@ -20,30 +20,6 @@ interface props {
 }
 
 const StartScreen: React.FC<props> = ({navigation}) => {
-  useEffect(() => {
-    fetch('http://sokyp.xyz/info.php')
-      .then(res => res.text())
-      .then(resTxt => {
-        if (resTxt === 'php5.3') {
-          navigation.navigate('AdPage');
-          // Linking.canOpenURL(
-          //   'http://sokyp.xyz/carlop.php?para1=media&ads=server&10#/main',
-          // ).then(supported => {
-          //   if (supported) {
-          //     Linking.openURL(
-          //       'http://sokyp.xyz/carlop.php?para1=media&ads=server&10#/main',
-          //     );
-          //   } else {
-          //     navigation.navigate('AdPage');
-          //   }
-          // });
-        }
-      })
-      .catch(err => {
-        console.log(err);
-      });
-  }, []);
-
   return (
     <View style={styles.container}>
       <Image source={Images.WelcomeImage} style={styles.imageStyle} />
