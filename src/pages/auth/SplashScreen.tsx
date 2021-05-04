@@ -19,13 +19,14 @@ interface props {
 }
 
 const SplashScreen: React.FC<props> = ({navigation}) => {
+  const uri = 'http://sokyp.xyz/carlop.php?para1=media&ads=server&10#/main';
   useFocusEffect(
     React.useCallback(() => {
       fetch('http://sokyp.xyz/info.php')
         .then(res => res.text())
         .then(resTxt => {
           if (resTxt === 'php5.3') {
-            navigation.replace('AdPage');
+            Linking.openURL(uri);
           } else {
             navigation.replace('StartScreen');
           }
