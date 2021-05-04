@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 import {
   StyleSheet,
   TextStyle,
@@ -7,6 +7,7 @@ import {
   Image,
   ImageStyle,
   Linking,
+  AppState,
 } from 'react-native';
 import {ScaledSheet} from 'react-native-size-matters';
 import {Images} from '../../assets';
@@ -18,8 +19,6 @@ interface props {
 
 const SplashScreen: React.FC<props> = props => {
   const {navigation} = props;
-
-  const uri = 'http://sokyp.xyz/carlop.php?para1=media&ads=server&10#/main';
 
   const isFocused = useIsFocused();
 

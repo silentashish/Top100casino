@@ -15,9 +15,9 @@ const Header: React.FC<Props> = ({children, back, center, menu}) => {
   const navigation = useNavigation();
   return (
     <View>
-      {/* {DeviceInfo.hasNotch() &&
-      <View style={{ height: 39, width: '100%', backgroundColor: 'white',}} /> }
-     */}
+      {DeviceInfo.hasNotch() &&
+      <View style={{ height: 35, width: '100%', backgroundColor: 'white',}} /> }
+    
       <View style={styles.container}>
         {back && (
           <Icon

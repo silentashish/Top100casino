@@ -2,6 +2,8 @@ import React from 'react';
 import {View, Text, StyleSheet, TextStyle, ViewStyle} from 'react-native';
 import {backgroundColor} from '../../constants/colors';
 import {Header} from './Header';
+import DeviceInfo from 'react-native-device-info';
+ 
 
 interface Props {
   children?: React.ReactNode;
@@ -17,6 +19,7 @@ const Container: React.FC<Props> = props => {
 
   return (
     <View style={styles.contain()}>
+      { DeviceInfo.hasNotch() && <View style={{ height: 35}} />}
       {header && <Header {...props}>{headerTitle}</Header>}
       {children}
     </View>
