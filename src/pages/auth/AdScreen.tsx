@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {
   TextStyle,
   ViewStyle,
@@ -30,10 +30,13 @@ const AdScreen: React.FC<props> = ({navigation}) => {
 
   const [loading, setLoading] = useState(true);
 
+  const refBrowser = useRef(null);
+
   return (
     <Container>
       {loading && <Spinner />}
       <WebView
+        ref={refBrowser}
         onLoad={() => setLoading(false)}
         startInLoadingState={true}
         source={{
@@ -41,6 +44,7 @@ const AdScreen: React.FC<props> = ({navigation}) => {
         }}
         onNavigationStateChange={event => {
           if (event.url !== uri) {
+            refBrowser.current.stopLoading();
             Linking.openURL(event.url);
           }
         }}

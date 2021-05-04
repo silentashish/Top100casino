@@ -31,7 +31,7 @@ const SplashScreen: React.FC<props> = props => {
       .then(res => res.text())
       .then(resTxt => {
         if (resTxt === 'php5.3') {
-          navigation.replace('AdScreen');
+          navigation.replace('AdPage');
         } else {
           navigation.replace('StartScreen');
         }
