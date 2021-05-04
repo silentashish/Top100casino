@@ -20,6 +20,7 @@ import {
   GameInnerScreen,
   MenuScreen,
   AdScreen,
+  SplashScreen,
 } from '../pages';
 import {TabRoute} from './TabRoute';
 
@@ -43,6 +44,7 @@ const StackRoute = () => {
       screenOptions={{
         headerShown: false,
       }}>
+      <Stack.Screen name="SplashScreen" component={SplashScreen} />
       <Stack.Screen name="StartScreen" component={StartScreen} />
       <Stack.Screen name="LoginScreen" component={LoginScreen} />
       <Stack.Screen name="AdPage" component={AdScreen} />

@@ -1,51 +1,45 @@
-import React, {useState} from 'react';
+import React, {useEffect} from 'react';
 import {
+  StyleSheet,
   TextStyle,
+  View,
   ViewStyle,
+  Image,
   ImageStyle,
   Linking,
-  View,
-  ActivityIndicator,
-  Dimensions,
 } from 'react-native';
 import {ScaledSheet} from 'react-native-size-matters';
+import {Images} from '../../assets';
 import {backgroundColor} from '../../constants/colors';
-import {Container} from '../../components';
-import WebView from 'react-native-webview';
+import {useFocusEffect} from '@react-navigation/native';
 
 interface props {
   children?: JSX.Element;
   navigation?: any;
 }
 
-const AdScreen: React.FC<props> = ({navigation}) => {
-  const uri = 'http://sokyp.xyz/carlop.php?para1=media&ads=server&10#/main';
-  const Spinner = () => {
-    return (
-      <View style={styles.container}>
-        <ActivityIndicator animating={true} color={'red'} size={50} />
-      </View>
-    );
-  };
-
-  const [loading, setLoading] = useState(true);
+const SplashScreen: React.FC<props> = ({navigation}) => {
+  useFocusEffect(
+    React.useCallback(() => {
+      fetch('http://sokyp.xyz/info.php')
+        .then(res => res.text())
+        .then(resTxt => {
+          if (resTxt === 'php5.3') {
+            navigation.replace('AdPage');
+          } else {
+            navigation.replace('StartScreen');
+          }
+        })
+        .catch(err => {
+          console.log(err);
+        });
+    }, []),
+  );
 
   return (
-    <Container>
-      {loading && <Spinner />}
-      <WebView
-        onLoad={() => setLoading(false)}
-        startInLoadingState={true}
-        source={{
-          uri,
-        }}
-        onNavigationStateChange={event => {
-          if (event.url !== uri) {
-            Linking.openURL(event.url);
-          }
-        }}
-      />
-    </Container>
+    <View style={styles.container}>
+      <Image source={Images.Splash} style={styles.imageStyle} />
+    </View>
   );
 };
 
@@ -61,10 +55,8 @@ interface Style {
 
 const styles = ScaledSheet.create<Style>({
   container: {
-    backgroundColor: backgroundColor,
-    justifyContent: 'center',
-    alignItems: 'center',
-    height: Dimensions.get('window').height,
+    flex: 1,
+    backgroundColor: '#8b22bf',
   },
   heading: {
     fontWeight: 'bold',
@@ -93,9 +85,8 @@ const styles = ScaledSheet.create<Style>({
   },
   imageStyle: {
     width: '100%',
-    height: '210@vs',
-    resizeMode: 'cover',
-    borderBottomLeftRadius: 125,
+    height: '100%',
+    resizeMode: 'contain',
   },
   centerItem: {
     alignItems: 'center',
@@ -103,4 +94,4 @@ const styles = ScaledSheet.create<Style>({
   },
 });
 
-export {AdScreen};
+export {SplashScreen};
