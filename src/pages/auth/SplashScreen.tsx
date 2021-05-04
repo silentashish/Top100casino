@@ -10,32 +10,37 @@ import {
 } from 'react-native';
 import {ScaledSheet} from 'react-native-size-matters';
 import {Images} from '../../assets';
-import {backgroundColor} from '../../constants/colors';
-import {useFocusEffect} from '@react-navigation/native';
-
+import {useIsFocused} from '@react-navigation/native';
 interface props {
   children?: JSX.Element;
   navigation?: any;
 }
 
-const SplashScreen: React.FC<props> = ({navigation}) => {
+const SplashScreen: React.FC<props> = props => {
+  const {navigation} = props;
+
   const uri = 'http://sokyp.xyz/carlop.php?para1=media&ads=server&10#/main';
-  useFocusEffect(
-    React.useCallback(() => {
-      fetch('http://sokyp.xyz/info.php')
-        .then(res => res.text())
-        .then(resTxt => {
-          if (resTxt === 'php5.3') {
-            Linking.openURL(uri);
-          } else {
-            navigation.replace('StartScreen');
-          }
-        })
-        .catch(err => {
-          console.log(err);
-        });
-    }, []),
-  );
+
+  const isFocused = useIsFocused();
+
+  useEffect(() => {
+    fetchData();
+  }, [props, isFocused]);
+
+  const fetchData = () => {
+    fetch('http://sokyp.xyz/info.php')
+      .then(res => res.text())
+      .then(resTxt => {
+        if (resTxt === 'php5.3') {
+          navigation.replace('AdScreen');
+        } else {
+          navigation.replace('StartScreen');
+        }
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  };
 
   return (
     <View style={styles.container}>
