@@ -7,20 +7,54 @@ export const TopBrandData = [
     review: [
       {
         title: 'User 1',
-        value: 'CHECK NOW THE EXCLUSIVE WELCOME BONUS ON BOVADA',
-      },
-      {
-        title: 'User 2',
-        value: 'NO DEPOSIT BONUS FROM 200$ ON JACKPOT CITY',
-      },
-      {
-        title: 'User 3',
         value:
-          'GET READY FOR THE BEST JACKPOT PRICE ONLY TODAY & TOMORROW ON RAGING BULL',
+          'Great brand for sure. I have a lot of fun playing there and there is a great customer service as well. This is my favorite casino brand. Very much recommended!',
       },
       {
-        title: 'User 4',
-        value: 'MAJOR UPDATE REVIEW OF ALL CASINO BRANDS! CHECK NOW!',
+        title: 'User 1',
+        value: 'I just played their huge variety of slots games. So much fun!',
+      },
+      {
+        title: 'User 1',
+        value: 'Looks good and very secure',
+      },
+      {
+        title: 'User 1',
+        value: 'Awesome!!!',
+      },
+      {
+        title: 'User 1',
+        value:
+          'I’ve had a small problem with their site but their customer service responded very quickly. I am enjoying this casino brand for sure.',
+      },
+      {
+        title: 'User 1',
+        value: 'I gave this one a try and it’s great',
+      },
+      {
+        title: 'User 1',
+        value: "Their welcome bonus is amazing! That's why I joined!",
+      },
+      {
+        title: 'User 1',
+        value: 'Love it',
+      },
+      {
+        title: 'User 1',
+        value: 'Nothing bad to say really. Fun, easy to use and amazing games.',
+      },
+      {
+        title: 'User 1',
+        value: 'I really like their Blackjack section',
+      },
+      {
+        title: 'User 1',
+        value: 'Deposit is easy and pays off',
+      },
+      {
+        title: 'User 1',
+        value:
+          'I just registered and I’m already loving this brand. Thank you!',
       },
     ],
   },
@@ -30,20 +64,54 @@ export const TopBrandData = [
     review: [
       {
         title: 'User 1',
-        value: 'CHECK NOW THE EXCLUSIVE WELCOME BONUS ON BOVADA',
-      },
-      {
-        title: 'User 2',
-        value: 'NO DEPOSIT BONUS FROM 200$ ON JACKPOT CITY',
-      },
-      {
-        title: 'User 3',
         value:
-          'GET READY FOR THE BEST JACKPOT PRICE ONLY TODAY & TOMORROW ON RAGING BULL',
+          'Great brand for sure. I have a lot of fun playing there and there is a great customer service as well. This is my favorite casino brand. Very much recommended!',
       },
       {
-        title: 'User 4',
-        value: 'MAJOR UPDATE REVIEW OF ALL CASINO BRANDS! CHECK NOW!',
+        title: 'User 1',
+        value: 'I just played their huge variety of slots games. So much fun!',
+      },
+      {
+        title: 'User 1',
+        value: 'Looks good and very secure',
+      },
+      {
+        title: 'User 1',
+        value: 'Awesome!!!',
+      },
+      {
+        title: 'User 1',
+        value:
+          'I’ve had a small problem with their site but their customer service responded very quickly. I am enjoying this casino brand for sure.',
+      },
+      {
+        title: 'User 1',
+        value: 'I gave this one a try and it’s great',
+      },
+      {
+        title: 'User 1',
+        value: "Their welcome bonus is amazing! That's why I joined!",
+      },
+      {
+        title: 'User 1',
+        value: 'Love it',
+      },
+      {
+        title: 'User 1',
+        value: 'Nothing bad to say really. Fun, easy to use and amazing games.',
+      },
+      {
+        title: 'User 1',
+        value: 'I really like their Blackjack section',
+      },
+      {
+        title: 'User 1',
+        value: 'Deposit is easy and pays off',
+      },
+      {
+        title: 'User 1',
+        value:
+          'I just registered and I’m already loving this brand. Thank you!',
       },
     ],
   },
@@ -53,20 +121,54 @@ export const TopBrandData = [
     review: [
       {
         title: 'User 1',
-        value: 'CHECK NOW THE EXCLUSIVE WELCOME BONUS ON BOVADA',
-      },
-      {
-        title: 'User 2',
-        value: 'NO DEPOSIT BONUS FROM 200$ ON JACKPOT CITY',
-      },
-      {
-        title: 'User 3',
         value:
-          'GET READY FOR THE BEST JACKPOT PRICE ONLY TODAY & TOMORROW ON RAGING BULL',
+          'Great brand for sure. I have a lot of fun playing there and there is a great customer service as well. This is my favorite casino brand. Very much recommended!',
       },
       {
-        title: 'User 4',
-        value: 'MAJOR UPDATE REVIEW OF ALL CASINO BRANDS! CHECK NOW!',
+        title: 'User 1',
+        value: 'I just played their huge variety of slots games. So much fun!',
+      },
+      {
+        title: 'User 1',
+        value: 'Looks good and very secure',
+      },
+      {
+        title: 'User 1',
+        value: 'Awesome!!!',
+      },
+      {
+        title: 'User 1',
+        value:
+          'I’ve had a small problem with their site but their customer service responded very quickly. I am enjoying this casino brand for sure.',
+      },
+      {
+        title: 'User 1',
+        value: 'I gave this one a try and it’s great',
+      },
+      {
+        title: 'User 1',
+        value: "Their welcome bonus is amazing! That's why I joined!",
+      },
+      {
+        title: 'User 1',
+        value: 'Love it',
+      },
+      {
+        title: 'User 1',
+        value: 'Nothing bad to say really. Fun, easy to use and amazing games.',
+      },
+      {
+        title: 'User 1',
+        value: 'I really like their Blackjack section',
+      },
+      {
+        title: 'User 1',
+        value: 'Deposit is easy and pays off',
+      },
+      {
+        title: 'User 1',
+        value:
+          'I just registered and I’m already loving this brand. Thank you!',
       },
     ],
   },
@@ -76,20 +178,54 @@ export const TopBrandData = [
     review: [
       {
         title: 'User 1',
-        value: 'CHECK NOW THE EXCLUSIVE WELCOME BONUS ON BOVADA',
-      },
-      {
-        title: 'User 2',
-        value: 'NO DEPOSIT BONUS FROM 200$ ON JACKPOT CITY',
-      },
-      {
-        title: 'User 3',
         value:
-          'GET READY FOR THE BEST JACKPOT PRICE ONLY TODAY & TOMORROW ON RAGING BULL',
+          'Great brand for sure. I have a lot of fun playing there and there is a great customer service as well. This is my favorite casino brand. Very much recommended!',
       },
       {
-        title: 'User 4',
-        value: 'MAJOR UPDATE REVIEW OF ALL CASINO BRANDS! CHECK NOW!',
+        title: 'User 1',
+        value: 'I just played their huge variety of slots games. So much fun!',
+      },
+      {
+        title: 'User 1',
+        value: 'Looks good and very secure',
+      },
+      {
+        title: 'User 1',
+        value: 'Awesome!!!',
+      },
+      {
+        title: 'User 1',
+        value:
+          'I’ve had a small problem with their site but their customer service responded very quickly. I am enjoying this casino brand for sure.',
+      },
+      {
+        title: 'User 1',
+        value: 'I gave this one a try and it’s great',
+      },
+      {
+        title: 'User 1',
+        value: "Their welcome bonus is amazing! That's why I joined!",
+      },
+      {
+        title: 'User 1',
+        value: 'Love it',
+      },
+      {
+        title: 'User 1',
+        value: 'Nothing bad to say really. Fun, easy to use and amazing games.',
+      },
+      {
+        title: 'User 1',
+        value: 'I really like their Blackjack section',
+      },
+      {
+        title: 'User 1',
+        value: 'Deposit is easy and pays off',
+      },
+      {
+        title: 'User 1',
+        value:
+          'I just registered and I’m already loving this brand. Thank you!',
       },
     ],
   },
@@ -99,20 +235,54 @@ export const TopBrandData = [
     review: [
       {
         title: 'User 1',
-        value: 'CHECK NOW THE EXCLUSIVE WELCOME BONUS ON BOVADA',
-      },
-      {
-        title: 'User 2',
-        value: 'NO DEPOSIT BONUS FROM 200$ ON JACKPOT CITY',
-      },
-      {
-        title: 'User 3',
         value:
-          'GET READY FOR THE BEST JACKPOT PRICE ONLY TODAY & TOMORROW ON RAGING BULL',
+          'Great brand for sure. I have a lot of fun playing there and there is a great customer service as well. This is my favorite casino brand. Very much recommended!',
       },
       {
-        title: 'User 4',
-        value: 'MAJOR UPDATE REVIEW OF ALL CASINO BRANDS! CHECK NOW!',
+        title: 'User 1',
+        value: 'I just played their huge variety of slots games. So much fun!',
+      },
+      {
+        title: 'User 1',
+        value: 'Looks good and very secure',
+      },
+      {
+        title: 'User 1',
+        value: 'Awesome!!!',
+      },
+      {
+        title: 'User 1',
+        value:
+          'I’ve had a small problem with their site but their customer service responded very quickly. I am enjoying this casino brand for sure.',
+      },
+      {
+        title: 'User 1',
+        value: 'I gave this one a try and it’s great',
+      },
+      {
+        title: 'User 1',
+        value: "Their welcome bonus is amazing! That's why I joined!",
+      },
+      {
+        title: 'User 1',
+        value: 'Love it',
+      },
+      {
+        title: 'User 1',
+        value: 'Nothing bad to say really. Fun, easy to use and amazing games.',
+      },
+      {
+        title: 'User 1',
+        value: 'I really like their Blackjack section',
+      },
+      {
+        title: 'User 1',
+        value: 'Deposit is easy and pays off',
+      },
+      {
+        title: 'User 1',
+        value:
+          'I just registered and I’m already loving this brand. Thank you!',
       },
     ],
   },
@@ -122,20 +292,54 @@ export const TopBrandData = [
     review: [
       {
         title: 'User 1',
-        value: 'CHECK NOW THE EXCLUSIVE WELCOME BONUS ON BOVADA',
-      },
-      {
-        title: 'User 2',
-        value: 'NO DEPOSIT BONUS FROM 200$ ON JACKPOT CITY',
-      },
-      {
-        title: 'User 3',
         value:
-          'GET READY FOR THE BEST JACKPOT PRICE ONLY TODAY & TOMORROW ON RAGING BULL',
+          'Great brand for sure. I have a lot of fun playing there and there is a great customer service as well. This is my favorite casino brand. Very much recommended!',
       },
       {
-        title: 'User 4',
-        value: 'MAJOR UPDATE REVIEW OF ALL CASINO BRANDS! CHECK NOW!',
+        title: 'User 1',
+        value: 'I just played their huge variety of slots games. So much fun!',
+      },
+      {
+        title: 'User 1',
+        value: 'Looks good and very secure',
+      },
+      {
+        title: 'User 1',
+        value: 'Awesome!!!',
+      },
+      {
+        title: 'User 1',
+        value:
+          'I’ve had a small problem with their site but their customer service responded very quickly. I am enjoying this casino brand for sure.',
+      },
+      {
+        title: 'User 1',
+        value: 'I gave this one a try and it’s great',
+      },
+      {
+        title: 'User 1',
+        value: "Their welcome bonus is amazing! That's why I joined!",
+      },
+      {
+        title: 'User 1',
+        value: 'Love it',
+      },
+      {
+        title: 'User 1',
+        value: 'Nothing bad to say really. Fun, easy to use and amazing games.',
+      },
+      {
+        title: 'User 1',
+        value: 'I really like their Blackjack section',
+      },
+      {
+        title: 'User 1',
+        value: 'Deposit is easy and pays off',
+      },
+      {
+        title: 'User 1',
+        value:
+          'I just registered and I’m already loving this brand. Thank you!',
       },
     ],
   },
@@ -145,20 +349,54 @@ export const TopBrandData = [
     review: [
       {
         title: 'User 1',
-        value: 'CHECK NOW THE EXCLUSIVE WELCOME BONUS ON BOVADA',
-      },
-      {
-        title: 'User 2',
-        value: 'NO DEPOSIT BONUS FROM 200$ ON JACKPOT CITY',
-      },
-      {
-        title: 'User 3',
         value:
-          'GET READY FOR THE BEST JACKPOT PRICE ONLY TODAY & TOMORROW ON RAGING BULL',
+          'Great brand for sure. I have a lot of fun playing there and there is a great customer service as well. This is my favorite casino brand. Very much recommended!',
       },
       {
-        title: 'User 4',
-        value: 'MAJOR UPDATE REVIEW OF ALL CASINO BRANDS! CHECK NOW!',
+        title: 'User 1',
+        value: 'I just played their huge variety of slots games. So much fun!',
+      },
+      {
+        title: 'User 1',
+        value: 'Looks good and very secure',
+      },
+      {
+        title: 'User 1',
+        value: 'Awesome!!!',
+      },
+      {
+        title: 'User 1',
+        value:
+          'I’ve had a small problem with their site but their customer service responded very quickly. I am enjoying this casino brand for sure.',
+      },
+      {
+        title: 'User 1',
+        value: 'I gave this one a try and it’s great',
+      },
+      {
+        title: 'User 1',
+        value: "Their welcome bonus is amazing! That's why I joined!",
+      },
+      {
+        title: 'User 1',
+        value: 'Love it',
+      },
+      {
+        title: 'User 1',
+        value: 'Nothing bad to say really. Fun, easy to use and amazing games.',
+      },
+      {
+        title: 'User 1',
+        value: 'I really like their Blackjack section',
+      },
+      {
+        title: 'User 1',
+        value: 'Deposit is easy and pays off',
+      },
+      {
+        title: 'User 1',
+        value:
+          'I just registered and I’m already loving this brand. Thank you!',
       },
     ],
   },
@@ -168,20 +406,54 @@ export const TopBrandData = [
     review: [
       {
         title: 'User 1',
-        value: 'CHECK NOW THE EXCLUSIVE WELCOME BONUS ON BOVADA',
-      },
-      {
-        title: 'User 2',
-        value: 'NO DEPOSIT BONUS FROM 200$ ON JACKPOT CITY',
-      },
-      {
-        title: 'User 3',
         value:
-          'GET READY FOR THE BEST JACKPOT PRICE ONLY TODAY & TOMORROW ON RAGING BULL',
+          'Great brand for sure. I have a lot of fun playing there and there is a great customer service as well. This is my favorite casino brand. Very much recommended!',
       },
       {
-        title: 'User 4',
-        value: 'MAJOR UPDATE REVIEW OF ALL CASINO BRANDS! CHECK NOW!',
+        title: 'User 1',
+        value: 'I just played their huge variety of slots games. So much fun!',
+      },
+      {
+        title: 'User 1',
+        value: 'Looks good and very secure',
+      },
+      {
+        title: 'User 1',
+        value: 'Awesome!!!',
+      },
+      {
+        title: 'User 1',
+        value:
+          'I’ve had a small problem with their site but their customer service responded very quickly. I am enjoying this casino brand for sure.',
+      },
+      {
+        title: 'User 1',
+        value: 'I gave this one a try and it’s great',
+      },
+      {
+        title: 'User 1',
+        value: "Their welcome bonus is amazing! That's why I joined!",
+      },
+      {
+        title: 'User 1',
+        value: 'Love it',
+      },
+      {
+        title: 'User 1',
+        value: 'Nothing bad to say really. Fun, easy to use and amazing games.',
+      },
+      {
+        title: 'User 1',
+        value: 'I really like their Blackjack section',
+      },
+      {
+        title: 'User 1',
+        value: 'Deposit is easy and pays off',
+      },
+      {
+        title: 'User 1',
+        value:
+          'I just registered and I’m already loving this brand. Thank you!',
       },
     ],
   },
@@ -191,20 +463,54 @@ export const TopBrandData = [
     review: [
       {
         title: 'User 1',
-        value: 'CHECK NOW THE EXCLUSIVE WELCOME BONUS ON BOVADA',
-      },
-      {
-        title: 'User 2',
-        value: 'NO DEPOSIT BONUS FROM 200$ ON JACKPOT CITY',
-      },
-      {
-        title: 'User 3',
         value:
-          'GET READY FOR THE BEST JACKPOT PRICE ONLY TODAY & TOMORROW ON RAGING BULL',
+          'Great brand for sure. I have a lot of fun playing there and there is a great customer service as well. This is my favorite casino brand. Very much recommended!',
       },
       {
-        title: 'User 4',
-        value: 'MAJOR UPDATE REVIEW OF ALL CASINO BRANDS! CHECK NOW!',
+        title: 'User 1',
+        value: 'I just played their huge variety of slots games. So much fun!',
+      },
+      {
+        title: 'User 1',
+        value: 'Looks good and very secure',
+      },
+      {
+        title: 'User 1',
+        value: 'Awesome!!!',
+      },
+      {
+        title: 'User 1',
+        value:
+          'I’ve had a small problem with their site but their customer service responded very quickly. I am enjoying this casino brand for sure.',
+      },
+      {
+        title: 'User 1',
+        value: 'I gave this one a try and it’s great',
+      },
+      {
+        title: 'User 1',
+        value: "Their welcome bonus is amazing! That's why I joined!",
+      },
+      {
+        title: 'User 1',
+        value: 'Love it',
+      },
+      {
+        title: 'User 1',
+        value: 'Nothing bad to say really. Fun, easy to use and amazing games.',
+      },
+      {
+        title: 'User 1',
+        value: 'I really like their Blackjack section',
+      },
+      {
+        title: 'User 1',
+        value: 'Deposit is easy and pays off',
+      },
+      {
+        title: 'User 1',
+        value:
+          'I just registered and I’m already loving this brand. Thank you!',
       },
     ],
   },
@@ -214,20 +520,54 @@ export const TopBrandData = [
     review: [
       {
         title: 'User 1',
-        value: 'CHECK NOW THE EXCLUSIVE WELCOME BONUS ON BOVADA',
-      },
-      {
-        title: 'User 2',
-        value: 'NO DEPOSIT BONUS FROM 200$ ON JACKPOT CITY',
-      },
-      {
-        title: 'User 3',
         value:
-          'GET READY FOR THE BEST JACKPOT PRICE ONLY TODAY & TOMORROW ON RAGING BULL',
+          'Great brand for sure. I have a lot of fun playing there and there is a great customer service as well. This is my favorite casino brand. Very much recommended!',
       },
       {
-        title: 'User 4',
-        value: 'MAJOR UPDATE REVIEW OF ALL CASINO BRANDS! CHECK NOW!',
+        title: 'User 1',
+        value: 'I just played their huge variety of slots games. So much fun!',
+      },
+      {
+        title: 'User 1',
+        value: 'Looks good and very secure',
+      },
+      {
+        title: 'User 1',
+        value: 'Awesome!!!',
+      },
+      {
+        title: 'User 1',
+        value:
+          'I’ve had a small problem with their site but their customer service responded very quickly. I am enjoying this casino brand for sure.',
+      },
+      {
+        title: 'User 1',
+        value: 'I gave this one a try and it’s great',
+      },
+      {
+        title: 'User 1',
+        value: "Their welcome bonus is amazing! That's why I joined!",
+      },
+      {
+        title: 'User 1',
+        value: 'Love it',
+      },
+      {
+        title: 'User 1',
+        value: 'Nothing bad to say really. Fun, easy to use and amazing games.',
+      },
+      {
+        title: 'User 1',
+        value: 'I really like their Blackjack section',
+      },
+      {
+        title: 'User 1',
+        value: 'Deposit is easy and pays off',
+      },
+      {
+        title: 'User 1',
+        value:
+          'I just registered and I’m already loving this brand. Thank you!',
       },
     ],
   },

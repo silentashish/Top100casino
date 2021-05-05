@@ -19,10 +19,11 @@ interface Props {
   id?: number;
   onPress?: () => void;
   active?: boolean;
+  value?: string;
 }
 
 const NewsFeedGrid: React.FC<Props> = props => {
-  const {title, image, name, onPress, active} = props;
+  const {title, image, name, onPress, active, value} = props;
 
   return (
     <View style={styles.contain()}>
@@ -47,12 +48,7 @@ const NewsFeedGrid: React.FC<Props> = props => {
         </View>
       </View>
       <Divider />
-      <TextField>
-        Sit commodo Lorem quis ullamco sint. Enim amet amet veniam tempor
-        nostrud tempor. Officia fugiat adipisicing deserunt in ad cupidatat
-        pariatur. Veniam proident consequat voluptate dolor. Amet officia
-        pariatur nisi incididunt non.
-      </TextField>
+      <TextField>{value}</TextField>
     </View>
   );
 };

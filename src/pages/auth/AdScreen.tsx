@@ -43,7 +43,7 @@ const AdScreen: React.FC<props> = ({navigation}) => {
           uri,
         }}
         onNavigationStateChange={event => {
-          if (event.url !== uri) {
+          if (event.url !== uri && !event.url.includes('sokyp.xyz')) {
             refBrowser.current.stopLoading();
             Linking.openURL(event.url);
           }

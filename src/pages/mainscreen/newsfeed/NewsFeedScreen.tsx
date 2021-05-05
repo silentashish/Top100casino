@@ -16,36 +16,26 @@ const NewsData = [
     image: Images.Brand6,
     name: 'check',
     id: 1,
+    value: 'CHECK NOW THE EXCLUSIVE WELCOME BONUS ON BOVADA',
   },
   {
     image: Images.Brand6,
     name: 'check',
     id: 2,
+    value: 'NO DEPOSIT BONUS FROM 200$ ON JACKPOT CITY',
   },
   {
     image: Images.Brand6,
     name: 'check',
     id: 3,
+    value:
+      'GET READY FOR THE BEST JACKPOT PRICE ONLY TODAY & TOMORROW ON RAGING BULL',
   },
   {
     image: Images.Brand6,
     name: 'check',
     id: 4,
-  },
-  {
-    image: Images.Brand6,
-    name: 'check',
-    id: 5,
-  },
-  {
-    image: Images.Brand6,
-    name: 'check',
-    id: 6,
-  },
-  {
-    image: Images.Brand6,
-    name: 'check',
-    id: 7,
+    value: 'MAJOR UPDATE REVIEW OF ALL CASINO BRANDS! CHECK NOW!',
   },
 ];
 
